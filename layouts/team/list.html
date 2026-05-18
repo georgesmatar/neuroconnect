@@ -18,7 +18,7 @@
     <div class="pi-card">
       <div class="pi-avatar-wrap">
         {{ if $page.Params.image }}
-        <img src="{{ $page.Params.image | relURL }}" alt="{{ $page.Title }}" class="pi-avatar-img" loading="lazy">
+        <img src="{{ $page.Params.image | absURL }}" alt="{{ $page.Title }}" class="pi-avatar-img" loading="lazy">
         {{ else }}
         <div class="pi-avatar-placeholder">
           <span>AW</span>
@@ -33,7 +33,7 @@
         </div>
         <h2 class="pi-name">{{ $page.Title }}</h2>
         <p class="pi-affil">{{ $page.Params.affiliation }}</p>
-        <p class="pi-bio">{{ $page.Content | plainify | truncate 360 }}</p>
+        <p class="pi-bio">{{ $page.Content | plainify }}</p>
         <div class="pi-links">
           {{ if $page.Params.email }}
           <a href="mailto:{{ $page.Params.email }}" class="pi-link-btn">
@@ -78,7 +78,7 @@
       <div class="team-card-senior">
         <div class="tcs-avatar">
           {{ if $p.Params.image }}
-          <img src="{{ $p.Params.image | relURL }}" alt="{{ $p.Title }}" loading="lazy">
+          <img src="{{ $p.Params.image | absURL }}" alt="{{ $p.Title }}" loading="lazy">
           {{ else }}
           <div class="tcs-initials">{{ substr $p.Title 0 2 }}</div>
           {{ end }}
@@ -87,7 +87,7 @@
           <div class="tcs-name">{{ $p.Title }}</div>
           <div class="tcs-role">{{ $p.Params.role }}</div>
           <div class="tcs-affil">{{ $p.Params.affiliation }}</div>
-          <p class="tcs-bio">{{ $p.Content | plainify | truncate 280 }}</p>
+          <p class="tcs-bio">{{ $p.Content | plainify }}</p>
           <div class="tcs-links">
             {{ if $p.Params.email }}
             <a href="mailto:{{ $p.Params.email }}" class="tcs-link-btn">
@@ -204,7 +204,7 @@
           <div class="join-position"><span class="jp-dot"></span><span>Clinical research fellows in epilepsy surgery</span></div>
           <div class="join-position"><span class="jp-dot"></span><span>Undergraduate interns (stage recherche)</span></div>
         </div>
-        <a href="{{ `/contact/` | relURL }}" class="btn btn-primary">Contact Us</a>
+        <a href="{{ `/contact/` | absURL }}" class="btn btn-primary">Contact Us</a>
       </div>
     </div>
   </div>
