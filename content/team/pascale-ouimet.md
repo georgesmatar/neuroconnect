@@ -3,7 +3,7 @@ title: "Pascale Ouimet"
 role: "Research Coordinator"
 affiliation: "CHU Sainte-Justine (HSJ)"
 email: "pascale.ouimet.hsj@ssss.gouv.qc.ca"
-image: "/images/team/pascale_ouimet.png"
+image: "/images/team/pascale_ouimet.jpg"
 weight: 5
 ---
 

@@ -4,7 +4,7 @@ role: "Postdoctoral Researcher (AI / iEEG)"
 affiliation: "CHU Sainte-Justine / Université de Montréal"
 email: "georges.matar.hsj@ssss.gouv.qc.ca"
 phone: "(438) 372-0102"
-image: "/images/team/georges-matar.png"
+image: "/images/team/georges-matar.jpg"
 scholar: "https://scholar.google.com/citations?user=D58oVDgAAAAJ&hl=en&oi=ao"
 pubmed: "https://pubmed.ncbi.nlm.nih.gov/?term=Georges+Matar%5BAuthor%5D"
 weight: 4
