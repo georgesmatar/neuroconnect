@@ -45,7 +45,7 @@
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
             PubMed
           </a>
-          <a href="https://scholar.google.com/scholar?q=Alexander+Weil+neurosurgery+epilepsy" target="_blank" rel="noopener" class="pi-link-btn">
+          <a href="https://scholar.google.com/citations?user=_9PwUiUAAAAJ&hl=fr&oi=sra" target="_blank" rel="noopener" class="pi-link-btn">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
             Scholar
           </a>
@@ -59,7 +59,8 @@
 <!-- CO-INVESTIGATORS & FELLOWS -->
 {{ $coinvestigators := where .Pages "Params.role" "Co-Investigator / Pediatric Epileptologist" }}
 {{ $fellows := where .Pages "Params.role" "Clinical Research Fellow" }}
-{{ $coinvAll := union $coinvestigators $fellows }}
+{{ $postdocs := where .Pages "Params.role" "Postdoctoral Researcher (AI / iEEG)" }}
+{{ $coinvAll := union (union $coinvestigators $fellows) $postdocs }}
 {{ if $coinvAll }}
 <section class="team-section">
   <div class="container">
