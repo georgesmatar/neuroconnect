@@ -13,7 +13,7 @@
     <article class="content-card">
       {{ with .Params.image }}
       <div class="card-image">
-        <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy">
+        <img src="{{ . | absURL }}" alt="{{ $.Title }}" loading="lazy">
       </div>
       {{ end }}
       <div class="card-body">
