@@ -1,0 +1,222 @@
+{{ define "main" }}
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <canvas id="neural-canvas" class="hero-canvas"></canvas>
+  <div class="eeg-strip">
+    <svg class="eeg-wave" viewBox="0 0 1200 80" preserveAspectRatio="none">
+      <path class="eeg-path" d="M0,40 L60,40 L80,10 L90,70 L100,5 L115,75 L125,40 L180,40 L200,40 L220,15 L230,65 L240,40 L300,40 L320,40 L340,20 L350,60 L360,40 L420,40 L440,40 L460,8 L470,72 L480,3 L495,77 L505,40 L560,40 L580,40 L600,25 L610,55 L620,40 L680,40 L700,40 L720,12 L730,68 L740,40 L800,40 L820,40 L840,18 L850,62 L860,40 L920,40 L940,40 L960,6 L970,74 L980,1 L995,79 L1005,40 L1060,40 L1080,40 L1100,22 L1110,58 L1120,40 L1200,40" fill="none" stroke="#00d4ff" stroke-width="2"/>
+    </svg>
+  </div>
+  <div class="hero-content container">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      Clinical Neuroscience Research
+    </div>
+    <h1 class="hero-title">
+      Mapping the <span class="text-gradient">Epileptic Brain</span><br>
+      to Cure It
+    </h1>
+    <p class="hero-subtitle">{{ site.Params.description }}. We combine SEEG, neuroimaging, and AI to localize seizure networks and deliver precision surgery.</p>
+    <div class="hero-actions">
+      <a href="{{ `/research/` | relURL }}" class="btn btn-primary">Explore Research</a>
+      <a href="{{ `/publications/` | relURL }}" class="btn btn-outline">Publications</a>
+    </div>
+    <div class="hero-stats">
+      {{ range site.Params.stats }}
+      <div class="stat-item">
+        <span class="stat-number">{{ .number }}</span>
+        <span class="stat-label">{{ .label }}</span>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- RESEARCH AREAS -->
+<section class="section research-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">What We Do</span>
+      <h2 class="section-title">Research Focus Areas</h2>
+      <p class="section-subtitle">Our interdisciplinary team bridges bench and bedside to transform epilepsy care.</p>
+    </div>
+    <div class="research-grid">
+      {{ range site.Params.research_areas }}
+      <div class="research-card" data-aos="fade-up">
+        <div class="card-icon icon-{{ .icon }}">
+          {{ if eq .icon "brain" }}
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 2C8 2 5 5 5 8c0 2 1 3.5 2 4.5C5.5 14 4 16 4 18c0 2.5 2 4 4 4 .7 0 1.3-.1 1.9-.4.4 1.1 1.4 1.9 2.6 1.9 1.8 0 3.2-1.5 3.2-3.3V18"/>
+            <path d="M12 2c4 0 7 3 7 6 0 2-1 3.5-2 4.5 1.5 1.5 3 3.5 3 5.5 0 2.5-2 4-4 4-.7 0-1.3-.1-1.9-.4"/>
+            <path d="M8 10 Q12 8 16 10"/>
+          </svg>
+          {{ else if eq .icon "scalpel" }}
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M20 4L8.5 15.5"/>
+            <path d="M8.5 15.5L4 20 6 22 10.5 17.5"/>
+            <path d="M10.5 17.5L20 4"/>
+            <circle cx="17" cy="7" r="2"/>
+          </svg>
+          {{ else if eq .icon "network" }}
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="5" r="2"/>
+            <circle cx="5" cy="19" r="2"/>
+            <circle cx="19" cy="19" r="2"/>
+            <line x1="12" y1="7" x2="5" y2="17"/>
+            <line x1="12" y1="7" x2="19" y2="17"/>
+            <line x1="7" y1="19" x2="17" y2="19"/>
+          </svg>
+          {{ else }}
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/>
+            <line x1="9" y1="3" x2="9" y2="18"/>
+            <line x1="15" y1="6" x2="15" y2="21"/>
+          </svg>
+          {{ end }}
+        </div>
+        <h3 class="card-title">{{ .title }}</h3>
+        <p class="card-desc">{{ .description }}</p>
+        <a href="{{ `/research/` | relURL }}" class="card-link">Learn more →</a>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED VISUAL SECTION -->
+<section class="section visual-section">
+  <div class="container">
+    <div class="visual-grid">
+      <div class="visual-text">
+        <span class="section-tag">Our Approach</span>
+        <h2 class="section-title">Precision Surgery for Drug-Resistant Epilepsy</h2>
+        <p>We use Stereo-EEG (SEEG) to implant depth electrodes and record directly from the seizure onset zone. Combined with high-resolution MRI, PET, and machine learning, we identify surgical targets with millimeter precision.</p>
+        <ul class="feature-list">
+          <li><span class="feature-dot"></span>SEEG &amp; intracranial EEG recording</li>
+          <li><span class="feature-dot"></span>Laser interstitial thermal therapy (LITT)</li>
+          <li><span class="feature-dot"></span>Responsive neurostimulation (RNS)</li>
+          <li><span class="feature-dot"></span>Computational seizure network modeling</li>
+        </ul>
+        <a href="{{ `/research/` | relURL }}" class="btn btn-primary">Our Methods</a>
+      </div>
+      <div class="visual-art">
+        <div class="brain-viz">
+          <svg class="brain-svg" viewBox="0 0 400 380" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="brainGrad" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.2"/>
+                <stop offset="100%" stop-color="#0a0e1a" stop-opacity="0"/>
+              </radialGradient>
+              <filter id="glow">
+                <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+            <!-- Brain outline -->
+            <ellipse cx="200" cy="190" rx="170" ry="160" fill="url(#brainGrad)" stroke="#1a2a4a" stroke-width="1"/>
+            <!-- Sulci lines -->
+            <path d="M100 120 Q130 100 160 120 Q190 140 220 120 Q250 100 280 120" stroke="#00d4ff" stroke-width="1" fill="none" opacity="0.4" filter="url(#glow)"/>
+            <path d="M80 160 Q120 140 160 160 Q200 180 240 160 Q280 140 310 160" stroke="#00d4ff" stroke-width="1" fill="none" opacity="0.4"/>
+            <path d="M90 200 Q130 185 170 200 Q210 215 250 200 Q290 185 320 200" stroke="#00d4ff" stroke-width="1" fill="none" opacity="0.4"/>
+            <path d="M100 240 Q140 225 180 240 Q220 255 260 240 Q290 228 310 240" stroke="#00d4ff" stroke-width="1" fill="none" opacity="0.3"/>
+            <!-- SEEG electrodes -->
+            <g filter="url(#glow)">
+              <line x1="160" y1="80" x2="155" y2="220" stroke="#ff6b35" stroke-width="2" opacity="0.8"/>
+              <circle cx="155" cy="220" r="4" fill="#ff6b35" opacity="0.9"/>
+              <circle cx="155" cy="195" r="3" fill="#ff6b35" opacity="0.7"/>
+              <circle cx="157" cy="170" r="3" fill="#ff6b35" opacity="0.7"/>
+              <circle cx="158" cy="145" r="3" fill="#ff6b35" opacity="0.5"/>
+
+              <line x1="240" y1="75" x2="245" y2="230" stroke="#ff6b35" stroke-width="2" opacity="0.8"/>
+              <circle cx="245" cy="230" r="4" fill="#ff6b35" opacity="0.9"/>
+              <circle cx="244" cy="205" r="3" fill="#ff6b35" opacity="0.7"/>
+              <circle cx="243" cy="180" r="3" fill="#ff6b35" opacity="0.5"/>
+
+              <line x1="200" y1="70" x2="200" y2="240" stroke="#00d4ff" stroke-width="2" opacity="0.8"/>
+              <circle cx="200" cy="240" r="5" fill="#00d4ff" opacity="1"/>
+              <circle cx="200" cy="215" r="4" fill="#00d4ff" opacity="0.8"/>
+              <circle cx="200" cy="190" r="4" fill="#00d4ff" opacity="0.6"/>
+              <circle cx="200" cy="165" r="3" fill="#00d4ff" opacity="0.5"/>
+            </g>
+            <!-- Seizure zone pulse -->
+            <circle cx="200" cy="240" r="20" fill="none" stroke="#00d4ff" stroke-width="1.5" opacity="0.6" class="pulse-ring"/>
+            <circle cx="200" cy="240" r="35" fill="none" stroke="#00d4ff" stroke-width="1" opacity="0.3" class="pulse-ring-2"/>
+            <!-- EEG trace on brain -->
+            <path d="M120 300 L135 300 L140 285 L145 315 L150 280 L155 320 L160 300 L200 300 L215 300 L220 288 L225 312 L230 300 L270 300" stroke="#00d4ff" stroke-width="1.5" fill="none" opacity="0.7" filter="url(#glow)"/>
+            <!-- Labels -->
+            <text x="165" y="255" fill="#ff6b35" font-size="10" font-family="Inter" opacity="0.9">SOZ</text>
+            <text x="120" y="340" fill="#00d4ff" font-size="9" font-family="Inter" opacity="0.7">iEEG recording</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LATEST NEWS -->
+<section class="section news-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Latest Updates</span>
+      <h2 class="section-title">Lab News</h2>
+    </div>
+    <div class="news-grid">
+      {{ $news := where site.RegularPages "Section" "news" }}
+      {{ range first 3 $news }}
+      <article class="news-card">
+        <div class="news-meta">
+          <time datetime="{{ .Date | time.Format `2006-01-02` }}">{{ .Date | time.Format ":date_long" }}</time>
+          {{ with .Params.category }}<span class="news-tag">{{ . }}</span>{{ end }}
+        </div>
+        <h3 class="news-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <p class="news-summary">{{ .Summary | plainify | truncate 120 }}</p>
+        <a href="{{ .RelPermalink }}" class="card-link">Read more →</a>
+      </article>
+      {{ else }}
+      <article class="news-card">
+        <div class="news-meta"><time>May 2025</time><span class="news-tag">Research</span></div>
+        <h3 class="news-title">NeuroConnect Lab launches new SEEG research program</h3>
+        <p class="news-summary">Our lab has initiated a prospective study on high-frequency oscillations as biomarkers for epileptogenic tissue in drug-resistant focal epilepsy.</p>
+        <a href="{{ `/news/` | relURL }}" class="card-link">Read more →</a>
+      </article>
+      <article class="news-card">
+        <div class="news-meta"><time>April 2025</time><span class="news-tag">Publication</span></div>
+        <h3 class="news-title">New paper on seizure network dynamics published</h3>
+        <p class="news-summary">Our latest work in Brain Communications reveals novel patterns of seizure propagation in temporal lobe epilepsy using multivariate connectivity analysis.</p>
+        <a href="{{ `/news/` | relURL }}" class="card-link">Read more →</a>
+      </article>
+      <article class="news-card">
+        <div class="news-meta"><time>March 2025</time><span class="news-tag">Award</span></div>
+        <h3 class="news-title">Lab receives CIHR funding for epilepsy surgery outcomes</h3>
+        <p class="news-summary">We are proud to announce a 3-year CIHR grant to study long-term cognitive and seizure outcomes following epilepsy surgery in paediatric and adult populations.</p>
+        <a href="{{ `/news/` | relURL }}" class="card-link">Read more →</a>
+      </article>
+      {{ end }}
+    </div>
+    <div class="section-cta">
+      <a href="{{ `/news/` | relURL }}" class="btn btn-outline">View All News</a>
+    </div>
+  </div>
+</section>
+
+<!-- JOIN CTA -->
+<section class="section cta-section">
+  <div class="container">
+    <div class="cta-box">
+      <div class="cta-glow"></div>
+      <h2>Join the NeuroConnect Lab</h2>
+      <p>We are always looking for motivated graduate students, postdocs, and clinical fellows passionate about epilepsy research and surgical innovation.</p>
+      <div class="cta-actions">
+        <a href="{{ `/contact/` | relURL }}" class="btn btn-primary">Get in Touch</a>
+        <a href="{{ site.Params.github }}" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}

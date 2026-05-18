@@ -1,0 +1,58 @@
+{{ define "main" }}
+<div class="page-hero">
+  <div class="container">
+    <h1 class="page-title">{{ .Title }}</h1>
+    <p class="page-subtitle">{{ .Params.subtitle }}</p>
+  </div>
+</div>
+<div class="section-content container">
+  {{ .Content }}
+  <div class="team-grid">
+    {{ $pi := where .Pages "Params.role" "Principal Investigator" }}
+    {{ $others := where .Pages "Params.role" "!=" "Principal Investigator" }}
+    {{ range $pi }}
+    <div class="team-card" style="grid-column: span 1;">
+      <div class="team-avatar">
+        {{ with .Params.image }}
+        <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy">
+        {{ else }}
+        <div class="team-avatar-placeholder">{{ substr .Title 0 2 }}</div>
+        {{ end }}
+      </div>
+      <div class="team-info">
+        <div class="team-name">{{ .Title }}</div>
+        <div class="team-role">{{ .Params.role }}</div>
+        <div class="team-affil">{{ .Params.affiliation }}</div>
+        <div class="team-links">
+          {{ with .Params.email }}<a href="mailto:{{ . }}" class="team-link">✉</a>{{ end }}
+        </div>
+        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 12px; line-height: 1.6;">{{ .Summary | plainify | truncate 160 }}</p>
+      </div>
+    </div>
+    {{ end }}
+    {{ range $others }}
+    <div class="team-card">
+      <div class="team-avatar">
+        {{ with .Params.image }}
+        <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy">
+        {{ else }}
+        <div class="team-avatar-placeholder">{{ substr .Title 0 2 }}</div>
+        {{ end }}
+      </div>
+      <div class="team-info">
+        <div class="team-name">{{ .Title }}</div>
+        <div class="team-role">{{ .Params.role }}</div>
+        <div class="team-affil">{{ .Params.affiliation }}</div>
+        {{ with .Params.email }}<div class="team-links"><a href="mailto:{{ . }}" class="team-link">✉</a></div>{{ end }}
+      </div>
+    </div>
+    {{ end }}
+  </div>
+
+  <div style="margin-top: 80px; padding: 48px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; text-align: center;">
+    <h2 style="margin-bottom: 16px;">Join Our Team</h2>
+    <p style="color: var(--text-secondary); max-width: 500px; margin: 0 auto 28px;">We are actively looking for motivated graduate students (MSc/PhD), postdoctoral fellows, and clinical research trainees. Send your CV and a brief statement of research interests.</p>
+    <a href="{{ `/contact/` | relURL }}" class="btn btn-primary">Get in Touch</a>
+  </div>
+</div>
+{{ end }}

@@ -1,0 +1,72 @@
+baseURL: "https://georgesmatar.github.io/neuroconnect/"
+languageCode: "en-us"
+title: "NeuroConnect Lab"
+theme: "neuroconnect-theme"
+
+params:
+  description: "Advancing epilepsy care through surgical innovation and clinical neuroscience"
+  tagline: "Where Neuroscience Meets Surgical Precision"
+  email: "georgesmatar92@gmail.com"
+  github: "https://github.com/georgesmatar"
+  lab_name: "NeuroConnect Lab"
+  institution: "University Research Lab"
+  hero_cta: "Explore Our Research"
+  hero_cta_link: "/research/"
+
+  research_areas:
+    - title: "Epilepsy"
+      icon: "brain"
+      description: "Investigating the neural mechanisms of seizure generation, propagation, and termination using cutting-edge electrophysiology and neuroimaging."
+    - title: "Epilepsy Surgery"
+      icon: "scalpel"
+      description: "Developing precision surgical approaches for drug-resistant epilepsy, including SEEG, laser ablation, and neuromodulation therapies."
+    - title: "Clinical Neuroscience"
+      icon: "network"
+      description: "Translating basic science discoveries into improved clinical outcomes through rigorous patient-centered research and trial design."
+    - title: "Brain Mapping"
+      icon: "map"
+      description: "High-resolution mapping of eloquent cortex and seizure networks using intracranial EEG, fMRI, and advanced computational models."
+
+  stats:
+    - number: "200+"
+      label: "Patients Treated"
+    - number: "50+"
+      label: "Publications"
+    - number: "15+"
+      label: "Team Members"
+    - number: "10+"
+      label: "Years of Research"
+
+menu:
+  main:
+    - name: "Home"
+      url: "/"
+      weight: 1
+    - name: "Research"
+      url: "/research/"
+      weight: 2
+    - name: "Team"
+      url: "/team/"
+      weight: 3
+    - name: "Publications"
+      url: "/publications/"
+      weight: 4
+    - name: "Projects"
+      url: "/projects/"
+      weight: 5
+    - name: "News"
+      url: "/news/"
+      weight: 6
+    - name: "Contact"
+      url: "/contact/"
+      weight: 7
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+outputs:
+  home:
+    - HTML
+    - RSS

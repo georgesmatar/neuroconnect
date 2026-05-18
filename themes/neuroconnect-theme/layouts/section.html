@@ -1,0 +1,32 @@
+{{ define "main" }}
+<div class="page-hero">
+  <div class="container">
+    <h1 class="page-title">{{ .Title }}</h1>
+    {{ with .Params.subtitle }}<p class="page-subtitle">{{ . }}</p>{{ end }}
+  </div>
+</div>
+<div class="section-content container">
+  {{ .Content }}
+  {{ if .Pages }}
+  <div class="cards-grid">
+    {{ range .Pages }}
+    <article class="content-card">
+      {{ with .Params.image }}
+      <div class="card-image">
+        <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy">
+      </div>
+      {{ end }}
+      <div class="card-body">
+        {{ with .Params.category }}<span class="card-tag">{{ . }}</span>{{ end }}
+        {{ with .Params.role }}<span class="card-tag">{{ . }}</span>{{ end }}
+        <h2 class="card-heading"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        {{ with .Params.affiliation }}<p class="card-meta">{{ . }}</p>{{ end }}
+        <p class="card-excerpt">{{ .Summary | plainify | truncate 150 }}</p>
+        <a href="{{ .RelPermalink }}" class="card-link">Read more →</a>
+      </div>
+    </article>
+    {{ end }}
+  </div>
+  {{ end }}
+</div>
+{{ end }}

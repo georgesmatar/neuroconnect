@@ -1,0 +1,106 @@
+{{ define "main" }}
+<div class="page-hero">
+  <div class="container">
+    <h1 class="page-title">{{ .Title }}</h1>
+    <p class="page-subtitle">{{ .Params.subtitle }}</p>
+  </div>
+</div>
+<div class="section-content container">
+  <div class="contact-grid">
+    <div class="contact-info">
+      <h2>Get in Touch</h2>
+      <p style="color: var(--text-secondary); margin-bottom: 32px;">Whether you are a prospective student, a clinical collaborator, or a patient or family member, we would be happy to hear from you.</p>
+
+      <div class="contact-item">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </div>
+        <div>
+          <div class="contact-label">Email</div>
+          <div class="contact-value"><a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a></div>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+        </div>
+        <div>
+          <div class="contact-label">Location</div>
+          <div class="contact-value">CHU Sainte-Justine<br>3175 Côte-Sainte-Catherine<br>Montréal, QC H3T 1C5</div>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77A5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+          </svg>
+        </div>
+        <div>
+          <div class="contact-label">GitHub</div>
+          <div class="contact-value"><a href="{{ site.Params.github }}" target="_blank" rel="noopener">github.com/georgesmatar</a></div>
+        </div>
+      </div>
+
+      <div style="margin-top: 24px; padding: 24px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;">
+        <h3 style="font-size: 1rem; margin-bottom: 12px; color: var(--accent-blue);">Open Positions</h3>
+        <ul style="display: flex; flex-direction: column; gap: 8px;">
+          <li style="color: var(--text-secondary); font-size: 0.9rem; padding-left: 16px; position: relative;">
+            <span style="position: absolute; left: 0; color: var(--accent-blue);">→</span>
+            Graduate students (MSc/PhD) in neuroscience or biomedical engineering
+          </li>
+          <li style="color: var(--text-secondary); font-size: 0.9rem; padding-left: 16px; position: relative;">
+            <span style="position: absolute; left: 0; color: var(--accent-blue);">→</span>
+            Postdoctoral fellows in computational neuroscience
+          </li>
+          <li style="color: var(--text-secondary); font-size: 0.9rem; padding-left: 16px; position: relative;">
+            <span style="position: absolute; left: 0; color: var(--accent-blue);">→</span>
+            Clinical research fellows in epilepsy/neurosurgery
+          </li>
+          <li style="color: var(--text-secondary); font-size: 0.9rem; padding-left: 16px; position: relative;">
+            <span style="position: absolute; left: 0; color: var(--accent-blue);">→</span>
+            Undergraduate research interns (stage recherche)
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div>
+      <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required>
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <select id="subject" name="subject">
+            <option value="">Select a subject...</option>
+            <option value="prospective-student">Prospective Student / Trainee</option>
+            <option value="collaboration">Research Collaboration</option>
+            <option value="clinical">Clinical Inquiry</option>
+            <option value="media">Media / Press</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" placeholder="Please include relevant details about your inquiry, background, and how you found us..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">Send Message</button>
+        <p style="color: var(--text-muted); font-size: 0.8rem; text-align: center; margin-top: 8px;">We aim to respond within 2–3 business days.</p>
+      </form>
+    </div>
+  </div>
+</div>
+{{ end }}
