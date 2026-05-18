@@ -2,7 +2,7 @@
 
 <!-- HERO SECTION -->
 <section class="hero">
-  <div class="hero-photo-bg" style="background-image: url('/images/hero-brain.jpg');"></div>
+  <div class="hero-photo-bg" style="background-image: url('{{ `/images/hero-brain.jpg` | relURL }}');"></div>
   <canvas id="neural-canvas" class="hero-canvas"></canvas>
   <div class="eeg-strip">
     <svg class="eeg-wave" viewBox="0 0 1200 80" preserveAspectRatio="none">
@@ -108,7 +108,7 @@
       <div class="visual-art">
         <div class="brain-viz">
           <div class="brain-photo-wrap">
-            <img src="/images/brain-scan.jpg" alt="Brain MRI scan showing seizure onset zones" class="brain-photo">
+            <img src="{{ `/images/brain-scan.jpg` | relURL }}" alt="Brain MRI scan showing seizure onset zones" class="brain-photo">
             <div class="brain-photo-overlay">
               <span class="scan-label">SEEG · iEEG · MRI</span>
             </div>
