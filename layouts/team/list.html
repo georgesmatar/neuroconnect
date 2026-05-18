@@ -1,58 +1,191 @@
 {{ define "main" }}
+
+<!-- PAGE HERO -->
 <div class="page-hero">
   <div class="container">
-    <h1 class="page-title">{{ .Title }}</h1>
-    <p class="page-subtitle">{{ .Params.subtitle }}</p>
+    <span class="section-tag">The People</span>
+    <h1 class="page-title" style="margin-top:12px;">Our Team</h1>
+    <p class="page-subtitle">A multidisciplinary group united by a shared mission: curing epilepsy through science and surgery.</p>
   </div>
 </div>
-<div class="section-content container">
-  {{ .Content }}
-  <div class="team-grid">
-    {{ $pi := where .Pages "Params.role" "Principal Investigator" }}
-    {{ $others := where .Pages "Params.role" "!=" "Principal Investigator" }}
-    {{ range $pi }}
-    <div class="team-card" style="grid-column: span 1;">
-      <div class="team-avatar">
-        {{ with .Params.image }}
-        <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy">
-        {{ else }}
-        <div class="team-avatar-placeholder">{{ substr .Title 0 2 }}</div>
-        {{ end }}
-      </div>
-      <div class="team-info">
-        <div class="team-name">{{ .Title }}</div>
-        <div class="team-role">{{ .Params.role }}</div>
-        <div class="team-affil">{{ .Params.affiliation }}</div>
-        <div class="team-links">
-          {{ with .Params.email }}<a href="mailto:{{ . }}" class="team-link">✉</a>{{ end }}
-        </div>
-        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 12px; line-height: 1.6;">{{ .Summary | plainify | truncate 160 }}</p>
-      </div>
-    </div>
-    {{ end }}
-    {{ range $others }}
-    <div class="team-card">
-      <div class="team-avatar">
-        {{ with .Params.image }}
-        <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy">
-        {{ else }}
-        <div class="team-avatar-placeholder">{{ substr .Title 0 2 }}</div>
-        {{ end }}
-      </div>
-      <div class="team-info">
-        <div class="team-name">{{ .Title }}</div>
-        <div class="team-role">{{ .Params.role }}</div>
-        <div class="team-affil">{{ .Params.affiliation }}</div>
-        {{ with .Params.email }}<div class="team-links"><a href="mailto:{{ . }}" class="team-link">✉</a></div>{{ end }}
-      </div>
-    </div>
-    {{ end }}
-  </div>
 
-  <div style="margin-top: 80px; padding: 48px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; text-align: center;">
-    <h2 style="margin-bottom: 16px;">Join Our Team</h2>
-    <p style="color: var(--text-secondary); max-width: 500px; margin: 0 auto 28px;">We are actively looking for motivated graduate students (MSc/PhD), postdoctoral fellows, and clinical research trainees. Send your CV and a brief statement of research interests.</p>
-    <a href="{{ `/contact/` | relURL }}" class="btn btn-primary">Get in Touch</a>
+<!-- PI SPOTLIGHT -->
+{{ $pi := where .Pages "Params.role" "Principal Investigator" }}
+{{ range $pi }}
+{{ $page := . }}
+<section class="pi-spotlight">
+  <div class="container">
+    <div class="pi-card">
+      <div class="pi-avatar-wrap">
+        {{ if $page.Params.image }}
+        <img src="{{ $page.Params.image }}" alt="{{ $page.Title }}" class="pi-avatar-img" loading="lazy">
+        {{ else }}
+        <div class="pi-avatar-placeholder">
+          <span>AW</span>
+          <div class="pi-avatar-ring"></div>
+        </div>
+        {{ end }}
+        <div class="pi-badge">PI</div>
+      </div>
+      <div class="pi-info">
+        <div class="pi-meta-top">
+          <span class="section-tag">Principal Investigator</span>
+        </div>
+        <h2 class="pi-name">{{ $page.Title }}</h2>
+        <p class="pi-affil">{{ $page.Params.affiliation }}</p>
+        <p class="pi-bio">{{ $page.Content | plainify | truncate 360 }}</p>
+        <div class="pi-links">
+          {{ if $page.Params.email }}
+          <a href="mailto:{{ $page.Params.email }}" class="pi-link-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Email
+          </a>
+          {{ end }}
+          <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Weil+AG%5BAuthor%5D" target="_blank" rel="noopener" class="pi-link-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            PubMed
+          </a>
+          <a href="https://scholar.google.com/scholar?q=Alexander+Weil+neurosurgery+epilepsy" target="_blank" rel="noopener" class="pi-link-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            Scholar
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+</section>
+{{ end }}
+
+<!-- CO-INVESTIGATORS & FELLOWS -->
+{{ $coinvestigators := where .Pages "Params.role" "Co-Investigator / Pediatric Epileptologist" }}
+{{ $fellows := where .Pages "Params.role" "Clinical Research Fellow" }}
+{{ $coinvAll := union $coinvestigators $fellows }}
+{{ if $coinvAll }}
+<section class="team-section">
+  <div class="container">
+    <div class="team-section-header">
+      <h3 class="team-section-title">
+        <span class="tsection-line"></span>
+        Co-Investigators &amp; Fellows
+        <span class="tsection-line"></span>
+      </h3>
+    </div>
+    <div class="team-grid-senior">
+      {{ range $coinvAll }}
+      {{ $p := . }}
+      <div class="team-card-senior">
+        <div class="tcs-avatar">
+          {{ if $p.Params.image }}
+          <img src="{{ $p.Params.image }}" alt="{{ $p.Title }}" loading="lazy">
+          {{ else }}
+          <div class="tcs-initials">{{ substr $p.Title 0 2 }}</div>
+          {{ end }}
+        </div>
+        <div class="tcs-info">
+          <div class="tcs-name">{{ $p.Title }}</div>
+          <div class="tcs-role">{{ $p.Params.role }}</div>
+          <div class="tcs-affil">{{ $p.Params.affiliation }}</div>
+          {{ if $p.Params.email }}<a href="mailto:{{ $p.Params.email }}" class="tcs-email">{{ $p.Params.email }}</a>{{ end }}
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<!-- GRADUATE STUDENTS -->
+{{ $phd := where .Pages "Params.role" "PhD Student" }}
+{{ $msc := where .Pages "Params.role" "MSc Student" }}
+{{ $coord := where .Pages "Params.role" "Research Coordinator / MSc Student" }}
+{{ $grads := union (union $phd $msc) $coord }}
+{{ if $grads }}
+<section class="team-section team-section-alt">
+  <div class="container">
+    <div class="team-section-header">
+      <h3 class="team-section-title">
+        <span class="tsection-line"></span>
+        Graduate Students
+        <span class="tsection-line"></span>
+      </h3>
+    </div>
+    <div class="team-grid-members">
+      {{ range $grads }}
+      {{ $p := . }}
+      <div class="team-member-card">
+        <div class="tmc-avatar">
+          {{ if $p.Params.image }}
+          <img src="{{ $p.Params.image }}" alt="{{ $p.Title }}" loading="lazy">
+          {{ else }}
+          <div class="tmc-initials">{{ substr $p.Title 0 2 }}</div>
+          {{ end }}
+        </div>
+        <div class="tmc-name">{{ $p.Title }}</div>
+        <div class="tmc-role">{{ $p.Params.role }}</div>
+        {{ if $p.Params.project }}<div class="tmc-project">{{ $p.Params.project }}</div>{{ end }}
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<!-- INTERNS & MEDICAL STUDENTS -->
+{{ $med := where .Pages "Params.role" "Medical Student Researcher" }}
+{{ $intern := where .Pages "Params.role" "Research Intern" }}
+{{ $junior := union $med $intern }}
+{{ if $junior }}
+<section class="team-section">
+  <div class="container">
+    <div class="team-section-header">
+      <h3 class="team-section-title">
+        <span class="tsection-line"></span>
+        Research Interns &amp; Medical Students
+        <span class="tsection-line"></span>
+      </h3>
+    </div>
+    <div class="team-grid-members">
+      {{ range $junior }}
+      {{ $p := . }}
+      <div class="team-member-card">
+        <div class="tmc-avatar tmc-avatar-sm">
+          <div class="tmc-initials">{{ substr $p.Title 0 2 }}</div>
+        </div>
+        <div class="tmc-name">{{ $p.Title }}</div>
+        <div class="tmc-role">{{ $p.Params.role }}</div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<!-- JOIN THE LAB -->
+<section class="team-join-section">
+  <div class="container">
+    <div class="join-box">
+      <div class="join-glow"></div>
+      <div class="join-content">
+        <div class="join-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" stroke-width="1.5">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <h2>Join the NeuroConnect Lab</h2>
+        <p>We are always looking for motivated graduate students (MSc/PhD), postdoctoral fellows, and clinical research trainees who are passionate about epilepsy research and surgical neuroscience. Strong candidates in neuroscience, biomedical engineering, and clinical medicine are encouraged to apply.</p>
+        <div class="join-positions">
+          <div class="join-position"><span class="jp-dot"></span><span>MSc / PhD students in neuroscience or biomedical engineering</span></div>
+          <div class="join-position"><span class="jp-dot"></span><span>Postdoctoral fellows in computational or clinical neuroscience</span></div>
+          <div class="join-position"><span class="jp-dot"></span><span>Clinical research fellows in epilepsy surgery</span></div>
+          <div class="join-position"><span class="jp-dot"></span><span>Undergraduate interns (stage recherche)</span></div>
+        </div>
+        <a href="{{ `/contact/` | relURL }}" class="btn btn-primary">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 {{ end }}
