@@ -890,6 +890,10 @@ h1, h2, h3, h4, h5 { font-family: var(--font-display); font-weight: 700; line-he
 .tcs-affil { color: var(--text-muted); font-size: 0.8rem; margin-bottom: 6px; }
 .tcs-email { color: var(--text-muted); font-size: 0.8rem; }
 .tcs-email:hover { color: var(--accent-blue); }
+.tcs-bio { color: var(--text-muted); font-size: 0.82rem; line-height: 1.6; margin: 8px 0; }
+.tcs-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.tcs-link-btn { display: inline-flex; align-items: center; gap: 5px; padding: 5px 12px; border: 1px solid rgba(0,212,255,0.25); border-radius: 20px; color: var(--text-secondary); font-size: 0.75rem; font-weight: 500; transition: all 0.2s; text-decoration: none; }
+.tcs-link-btn:hover { border-color: var(--accent-blue); color: var(--accent-blue); background: rgba(0,212,255,0.06); }
 
 /* Members grid */
 .team-grid-members {
