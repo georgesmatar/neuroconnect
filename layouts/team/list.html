@@ -9,55 +9,63 @@
   </div>
 </div>
 
-<!-- PI SPOTLIGHT -->
-{{ $pi := where .Pages "Params.role" "Principal Investigator" }}
-{{ range $pi }}
-{{ $page := . }}
+<!-- CO-PI SPOTLIGHT -->
+{{ $pis := where .Pages "Params.role" "Co-Principal Investigator" }}
+{{ if $pis }}
 <section class="pi-spotlight">
   <div class="container">
-    <div class="pi-card">
-      <div class="pi-avatar-wrap">
-        {{ if $page.Params.image }}
-        <img src="{{ $page.Params.image | strings.TrimPrefix "/" | absURL }}" alt="{{ $page.Title }}" class="pi-avatar-img" loading="lazy">
-        {{ else }}
-        <div class="pi-avatar-placeholder">
-          <span>AW</span>
-          <div class="pi-avatar-ring"></div>
-        </div>
-        {{ end }}
-        <div class="pi-badge">PI</div>
-      </div>
-      <div class="pi-info">
-        <div class="pi-meta-top">
-          <span class="section-tag">Principal Investigator</span>
-        </div>
-        <h2 class="pi-name">{{ $page.Title }}</h2>
-        <p class="pi-affil">{{ $page.Params.affiliation }}</p>
-        <p class="pi-bio">{{ $page.Content | plainify }}</p>
-        <div class="pi-links">
-          {{ if $page.Params.email }}
-          <a href="mailto:{{ $page.Params.email }}" class="pi-link-btn">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            Email
-          </a>
+    <div class="copi-header">
+      <span class="section-tag">Co-Principal Investigators</span>
+    </div>
+    <div class="copi-grid">
+      {{ range $pis }}
+      {{ $page := . }}
+      <div class="pi-card">
+        <div class="pi-avatar-wrap">
+          {{ if $page.Params.image }}
+          <img src="{{ $page.Params.image | strings.TrimPrefix "/" | absURL }}" alt="{{ $page.Title }}" class="pi-avatar-img" loading="lazy">
+          {{ else }}
+          <div class="pi-avatar-placeholder">
+            <span>{{ substr $page.Title 0 2 }}</span>
+            <div class="pi-avatar-ring"></div>
+          </div>
           {{ end }}
-          <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Weil+AG%5BAuthor%5D" target="_blank" rel="noopener" class="pi-link-btn">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-            PubMed
-          </a>
-          <a href="https://scholar.google.com/citations?user=_9PwUiUAAAAJ&hl=fr&oi=sra" target="_blank" rel="noopener" class="pi-link-btn">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-            Scholar
-          </a>
+          <div class="pi-badge">Co-PI</div>
+        </div>
+        <div class="pi-info">
+          <h2 class="pi-name">{{ $page.Title }}</h2>
+          <p class="pi-affil">{{ $page.Params.affiliation }}</p>
+          <p class="pi-bio">{{ $page.Content | plainify }}</p>
+          <div class="pi-links">
+            {{ if $page.Params.email }}
+            <a href="mailto:{{ $page.Params.email }}" class="pi-link-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              Email
+            </a>
+            {{ end }}
+            {{ if $page.Params.pubmed }}
+            <a href="{{ $page.Params.pubmed }}" target="_blank" rel="noopener" class="pi-link-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+              PubMed
+            </a>
+            {{ end }}
+            {{ if $page.Params.scholar }}
+            <a href="{{ $page.Params.scholar }}" target="_blank" rel="noopener" class="pi-link-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              Scholar
+            </a>
+            {{ end }}
+          </div>
         </div>
       </div>
+      {{ end }}
     </div>
   </div>
 </section>
 {{ end }}
 
 <!-- CO-INVESTIGATORS & FELLOWS -->
-{{ $coinvestigators := where .Pages "Params.role" "Co-Investigator / Pediatric Epileptologist" }}
+{{ $coinvestigators := where .Pages "Params.role" "Co-Investigator" }}
 {{ $fellows := where .Pages "Params.role" "Clinical Research Fellow" }}
 {{ $postdocs := where .Pages "Params.role" "Postdoctoral Researcher (AI / iEEG)" }}
 {{ $coords := where .Pages "Params.role" "Research Coordinator" }}

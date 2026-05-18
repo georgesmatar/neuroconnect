@@ -1,6 +1,6 @@
 ---
 title: "Dr. Aris Hadjinicolaou"
-role: "Co-Investigator / Pediatric Epileptologist"
+role: "Co-Principal Investigator"
 affiliation: "CHU Sainte-Justine / Université de Montréal"
 email: "aris.hadjinicolaou.med@ssss.gouv.qc.ca"
 image: "/images/team/aris-hadjinicolaou.jpg"
