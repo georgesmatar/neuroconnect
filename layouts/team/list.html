@@ -18,7 +18,7 @@
     <div class="pi-card">
       <div class="pi-avatar-wrap">
         {{ if $page.Params.image }}
-        <img src="{{ $page.Params.image | absURL }}" alt="{{ $page.Title }}" class="pi-avatar-img" loading="lazy">
+        <img src="{{ $page.Params.image | strings.TrimPrefix "/" | absURL }}" alt="{{ $page.Title }}" class="pi-avatar-img" loading="lazy">
         {{ else }}
         <div class="pi-avatar-placeholder">
           <span>AW</span>
@@ -78,7 +78,7 @@
       <div class="team-card-senior">
         <div class="tcs-avatar">
           {{ if $p.Params.image }}
-          <img src="{{ $p.Params.image | absURL }}" alt="{{ $p.Title }}" loading="lazy">
+          <img src="{{ $p.Params.image | strings.TrimPrefix "/" | absURL }}" alt="{{ $p.Title }}" loading="lazy">
           {{ else }}
           <div class="tcs-initials">{{ substr $p.Title 0 2 }}</div>
           {{ end }}
@@ -137,7 +137,7 @@
       <div class="team-member-card">
         <div class="tmc-avatar">
           {{ if $p.Params.image }}
-          <img src="{{ $p.Params.image | absURL }}" alt="{{ $p.Title }}" loading="lazy">
+          <img src="{{ $p.Params.image | strings.TrimPrefix "/" | absURL }}" alt="{{ $p.Title }}" loading="lazy">
           {{ else }}
           <div class="tmc-initials">{{ substr $p.Title 0 2 }}</div>
           {{ end }}
