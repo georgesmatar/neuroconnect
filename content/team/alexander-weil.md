@@ -3,6 +3,7 @@ title: "Dr. Alexander Weil"
 role: "Principal Investigator"
 affiliation: "CHU Sainte-Justine / Université de Montréal"
 email: "alexander.weil@umontreal.ca"
+image: "/images/team/alexander-weil.jpg"
 weight: 1
 ---
 

@@ -2,6 +2,7 @@
 title: "Dr. Aris Hadjinicolaou"
 role: "Co-Investigator / Pediatric Epileptologist"
 affiliation: "CHU Sainte-Justine / Université de Montréal"
+image: "/images/team/aris-hadjinicolaou.jpg"
 weight: 2
 ---
 
