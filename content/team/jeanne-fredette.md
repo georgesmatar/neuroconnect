@@ -1,8 +1,9 @@
 ---
-title: "Jeanne Fredette"
+title: "Jeanne Frédette"
 role: "Research Intern"
 affiliation: "Université de Montréal"
+project: "Callosotomy EEG — interhemispheric connectivity"
 weight: 7
 ---
 
-Jeanne is an undergraduate research intern completing her neuroscience rotation in the NeuroConnect Lab. She is contributing to data collection and analysis on pediatric epilepsy surgery outcomes.
+Jeanne is a second-cycle neuroscience research intern working on the Callosotomy EEG project, analyzing interhemispheric connectivity biomarkers on pre-callosotomy EEG data in collaboration with Dr. Georges Matar.

@@ -18,7 +18,7 @@
     <div class="pi-card">
       <div class="pi-avatar-wrap">
         {{ if $page.Params.image }}
-        <img src="{{ $page.Params.image }}" alt="{{ $page.Title }}" class="pi-avatar-img" loading="lazy">
+        <img src="{{ $page.Params.image | relURL }}" alt="{{ $page.Title }}" class="pi-avatar-img" loading="lazy">
         {{ else }}
         <div class="pi-avatar-placeholder">
           <span>AW</span>
@@ -60,7 +60,8 @@
 {{ $coinvestigators := where .Pages "Params.role" "Co-Investigator / Pediatric Epileptologist" }}
 {{ $fellows := where .Pages "Params.role" "Clinical Research Fellow" }}
 {{ $postdocs := where .Pages "Params.role" "Postdoctoral Researcher (AI / iEEG)" }}
-{{ $coinvAll := union (union $coinvestigators $fellows) $postdocs }}
+{{ $coords := where .Pages "Params.role" "Research Coordinator" }}
+{{ $coinvAll := union (union (union $coinvestigators $fellows) $postdocs) $coords }}
 {{ if $coinvAll }}
 <section class="team-section">
   <div class="container">
@@ -77,7 +78,7 @@
       <div class="team-card-senior">
         <div class="tcs-avatar">
           {{ if $p.Params.image }}
-          <img src="{{ $p.Params.image }}" alt="{{ $p.Title }}" loading="lazy">
+          <img src="{{ $p.Params.image | relURL }}" alt="{{ $p.Title }}" loading="lazy">
           {{ else }}
           <div class="tcs-initials">{{ substr $p.Title 0 2 }}</div>
           {{ end }}

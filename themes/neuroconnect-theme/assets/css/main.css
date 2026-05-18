@@ -614,6 +614,11 @@ h1, h2, h3, h4, h5 { font-family: var(--font-display); font-weight: 700; line-he
 /* ══════════════════════════════════════════════
    PROJECTS PAGE
 ══════════════════════════════════════════════ */
+.proj-filter-bar { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 40px; }
+.proj-filter-btn { padding: 8px 18px; border: 1px solid var(--border-strong); border-radius: 24px; background: transparent; color: var(--text-secondary); font-size: 0.82rem; font-weight: 500; cursor: pointer; transition: all 0.2s; font-family: var(--font-body); }
+.proj-filter-btn:hover, .proj-filter-btn.active { background: var(--accent-blue); border-color: var(--accent-blue); color: #000; }
+.proj-section-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent-blue); margin: 40px 0 16px; padding-bottom: 8px; border-bottom: 1px solid rgba(0,212,255,0.2); }
+.cpcard-avatar-photo { overflow: hidden; }
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
