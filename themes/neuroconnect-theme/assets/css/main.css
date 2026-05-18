@@ -1589,6 +1589,19 @@ h1, h2, h3, h4, h5 { font-family: var(--font-display); font-weight: 700; line-he
   line-height: 1.6;
   margin-bottom: 0.9rem;
 }
+.copi-expand-btn {
+  background: none;
+  border: none;
+  color: var(--accent-blue);
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 0.75rem;
+  display: block;
+  transition: color var(--transition);
+}
+.copi-expand-btn:hover { color: #fff; }
 .copi-links {
   display: flex;
   flex-wrap: wrap;

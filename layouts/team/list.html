@@ -32,7 +32,8 @@
         <div class="copi-info">
           <h2 class="copi-name">{{ $page.Title }}</h2>
           <p class="copi-affil">{{ $page.Params.affiliation }}</p>
-          <p class="copi-bio">{{ $page.Content | plainify | truncate 220 }}</p>
+          <p class="copi-bio" data-full="{{ $page.Content | plainify }}" data-short="{{ $page.Content | plainify | truncate 220 }}">{{ $page.Content | plainify | truncate 220 }}</p>
+          <button class="copi-expand-btn" onclick="toggleCopiBio(this)">Read more ↓</button>
           <div class="copi-links">
             {{ if $page.Params.email }}
             <a href="mailto:{{ $page.Params.email }}" class="pi-link-btn">
@@ -73,7 +74,7 @@
     <div class="team-section-header">
       <h3 class="team-section-title">
         <span class="tsection-line"></span>
-        Co-Investigators &amp; Fellows
+        Lab Admins
         <span class="tsection-line"></span>
       </h3>
     </div>
@@ -214,5 +215,15 @@
     </div>
   </div>
 </section>
+
+<script>
+function toggleCopiBio(btn) {
+  var p = btn.previousElementSibling;
+  var expanded = btn.getAttribute('data-expanded') === 'true';
+  p.textContent = expanded ? p.dataset.short : p.dataset.full;
+  btn.textContent = expanded ? 'Read more ↓' : 'Show less ↑';
+  btn.setAttribute('data-expanded', expanded ? 'false' : 'true');
+}
+</script>
 
 {{ end }}
