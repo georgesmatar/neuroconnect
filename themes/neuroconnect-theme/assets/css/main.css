@@ -497,6 +497,92 @@ h1, h2, h3, h4, h5 { font-family: var(--font-display); font-weight: 700; line-he
 ══════════════════════════════════════════════ */
 .section-content { padding: 60px 24px; }
 .section-content > .page-content { padding: 0; }
+
+/* ══════════════════════════════════════════════
+   ACHIEVEMENTS / AWARDS & TALKS
+══════════════════════════════════════════════ */
+.ach-section { margin-bottom: 16px; }
+.ach-section-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 32px;
+}
+.ach-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: var(--accent-blue-dim);
+  border: 1px solid var(--border-strong);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.ach-section-header h2 {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+}
+.ach-timeline { display: flex; flex-direction: column; gap: 32px; }
+.ach-year-group { display: grid; grid-template-columns: 72px 1fr; gap: 0 24px; align-items: start; }
+.ach-year-marker {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--accent-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding-top: 4px;
+  text-align: right;
+}
+.ach-items {
+  border-left: 1px solid var(--border-strong);
+  padding-left: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.ach-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  position: relative;
+}
+.ach-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent-blue);
+  border: 2px solid var(--bg-primary);
+  flex-shrink: 0;
+  margin-top: 5px;
+  margin-left: -29px;
+}
+.ach-dot-milestone {
+  width: 14px;
+  height: 14px;
+  background: var(--accent-orange);
+  margin-left: -31px;
+  box-shadow: 0 0 12px rgba(255, 107, 53, 0.5);
+}
+.ach-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+.ach-org {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-top: 3px;
+}
+.ach-item-flat { margin-left: 0; }
+@media (max-width: 600px) {
+  .ach-year-group { grid-template-columns: 1fr; }
+  .ach-year-marker { text-align: left; margin-bottom: 12px; font-size: 0.85rem; }
+  .ach-items { padding-left: 16px; }
+  .ach-dot { margin-left: -21px; }
+  .ach-dot-milestone { margin-left: -23px; }
+}
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
