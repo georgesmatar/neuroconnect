@@ -1443,6 +1443,7 @@ h1, h2, h3, h4, h5 { font-family: var(--font-display); font-weight: 700; line-he
   .hero-stats { gap: 24px; flex-wrap: wrap; }
   .stat-number { font-size: 1.8rem; }
   .hero-actions { flex-direction: column; width: fit-content; }
+  .hero-scroll { display: none; }
 
   /* ── Mobile sections ── */
   .cta-box { padding: 48px 24px; }
