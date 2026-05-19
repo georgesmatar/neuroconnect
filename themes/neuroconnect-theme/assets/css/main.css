@@ -576,12 +576,59 @@ h1, h2, h3, h4, h5 { font-family: var(--font-display); font-weight: 700; line-he
   margin-top: 3px;
 }
 .ach-item-flat { margin-left: 0; }
+.ach-badge {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 2px 8px;
+  border-radius: 100px;
+  background: var(--accent-blue-dim);
+  color: var(--accent-blue);
+  border: 1px solid var(--border-strong);
+  margin-left: 8px;
+  vertical-align: middle;
+}
+.ach-badge-upcoming { background: rgba(255,107,53,0.12); color: var(--accent-orange); border-color: rgba(255,107,53,0.3); }
+.ach-supervision-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 8px;
+}
+.ach-sup-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px 20px;
+  text-align: center;
+}
+.ach-sup-number {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--accent-blue);
+  font-family: var(--font-display);
+  line-height: 1;
+}
+.ach-sup-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-top: 6px;
+}
+.ach-sup-detail {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
 @media (max-width: 600px) {
   .ach-year-group { grid-template-columns: 1fr; }
   .ach-year-marker { text-align: left; margin-bottom: 12px; font-size: 0.85rem; }
   .ach-items { padding-left: 16px; }
   .ach-dot { margin-left: -21px; }
   .ach-dot-milestone { margin-left: -23px; }
+  .ach-supervision-grid { grid-template-columns: 1fr 1fr; }
 }
 .cards-grid {
   display: grid;
