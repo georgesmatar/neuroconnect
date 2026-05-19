@@ -1401,25 +1401,24 @@ h1, h2, h3, h4, h5 { font-family: var(--font-display); font-weight: 700; line-he
   .area-number { font-size: 2.5rem; }
 }
 @media (max-width: 768px) {
-  /* ── Mobile nav overlay ── */
+  /* ── Mobile nav dropdown ── */
   .nav-menu {
     display: none;
     position: fixed;
-    top: 0;
+    top: var(--nav-height);
     left: 0;
     right: 0;
-    bottom: 0;
     background: #07090f;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 4px;
     z-index: 1001;
     list-style: none;
-    padding: 0;
+    padding: 16px 16px 24px;
     margin: 0;
-    padding-top: var(--nav-height);
-    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
   }
   .nav-menu.open { display: flex; }
   .nav-item { list-style: none; width: 100%; text-align: center; }

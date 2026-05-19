@@ -12,12 +12,22 @@ if (navbar) {
 const toggle = document.getElementById('nav-toggle');
 const menu = document.getElementById('nav-menu');
 if (toggle && menu) {
-  toggle.addEventListener('click', () => {
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation();
     menu.classList.toggle('open');
     toggle.classList.toggle('open');
   });
   document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => menu.classList.remove('open'));
+    link.addEventListener('click', () => {
+      menu.classList.remove('open');
+      toggle.classList.remove('open');
+    });
+  });
+  document.addEventListener('click', (e) => {
+    if (!menu.contains(e.target) && !toggle.contains(e.target)) {
+      menu.classList.remove('open');
+      toggle.classList.remove('open');
+    }
   });
 }
 
