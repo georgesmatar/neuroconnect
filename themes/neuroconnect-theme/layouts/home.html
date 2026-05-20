@@ -1,7 +1,9 @@
 {{ define "main" }}
 
-<!-- HERO SECTION -->
-<section class="hero">
+<!-- ═══════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════ -->
+<section class="hero" id="home">
   <div class="hero-photo-bg" style="background-image: url('https://georgesmatar.github.io/neuroconnect/images/hero-brain.jpg');"></div>
   <canvas id="neural-canvas" class="hero-canvas"></canvas>
   <div class="eeg-strip">
@@ -20,8 +22,8 @@
     </h1>
     <p class="hero-subtitle">{{ site.Params.description }}. We combine SEEG, neuroimaging, and AI to localize seizure networks and deliver precision surgery.</p>
     <div class="hero-actions">
-      <a href="https://georgesmatar.github.io/neuroconnect/research/" class="btn btn-primary">Explore Research</a>
-      <a href="https://georgesmatar.github.io/neuroconnect/publications/" class="btn btn-outline">Publications</a>
+      <a href="#research" class="btn btn-primary">Explore Research</a>
+      <a href="#publications" class="btn btn-outline">Publications</a>
     </div>
     <div class="hero-stats">
       {{ range site.Params.stats }}
@@ -38,8 +40,10 @@
   </div>
 </section>
 
-<!-- RESEARCH AREAS -->
-<section class="section research-section">
+<!-- ═══════════════════════════════════════════
+     RESEARCH
+═══════════════════════════════════════════ -->
+<section class="section research-section" id="research">
   <div class="container">
     <div class="section-header" data-aos="fade-up">
       <span class="section-tag">What We Do</span>
@@ -51,47 +55,22 @@
       <div class="research-card" data-aos="fade-up">
         <div class="card-icon icon-{{ .icon }}">
           {{ if eq .icon "brain" }}
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M12 2C8 2 5 5 5 8c0 2 1 3.5 2 4.5C5.5 14 4 16 4 18c0 2.5 2 4 4 4 .7 0 1.3-.1 1.9-.4.4 1.1 1.4 1.9 2.6 1.9 1.8 0 3.2-1.5 3.2-3.3V18"/>
-            <path d="M12 2c4 0 7 3 7 6 0 2-1 3.5-2 4.5 1.5 1.5 3 3.5 3 5.5 0 2.5-2 4-4 4-.7 0-1.3-.1-1.9-.4"/>
-            <path d="M8 10 Q12 8 16 10"/>
-          </svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8 2 5 5 5 8c0 2 1 3.5 2 4.5C5.5 14 4 16 4 18c0 2.5 2 4 4 4 .7 0 1.3-.1 1.9-.4.4 1.1 1.4 1.9 2.6 1.9 1.8 0 3.2-1.5 3.2-3.3V18"/><path d="M12 2c4 0 7 3 7 6 0 2-1 3.5-2 4.5 1.5 1.5 3 3.5 3 5.5 0 2.5-2 4-4 4-.7 0-1.3-.1-1.9-.4"/><path d="M8 10 Q12 8 16 10"/></svg>
           {{ else if eq .icon "scalpel" }}
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M20 4L8.5 15.5"/>
-            <path d="M8.5 15.5L4 20 6 22 10.5 17.5"/>
-            <path d="M10.5 17.5L20 4"/>
-            <circle cx="17" cy="7" r="2"/>
-          </svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 4L8.5 15.5"/><path d="M8.5 15.5L4 20 6 22 10.5 17.5"/><path d="M10.5 17.5L20 4"/><circle cx="17" cy="7" r="2"/></svg>
           {{ else if eq .icon "network" }}
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <circle cx="12" cy="5" r="2"/>
-            <circle cx="5" cy="19" r="2"/>
-            <circle cx="19" cy="19" r="2"/>
-            <line x1="12" y1="7" x2="5" y2="17"/>
-            <line x1="12" y1="7" x2="19" y2="17"/>
-            <line x1="7" y1="19" x2="17" y2="19"/>
-          </svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><line x1="12" y1="7" x2="5" y2="17"/><line x1="12" y1="7" x2="19" y2="17"/><line x1="7" y1="19" x2="17" y2="19"/></svg>
           {{ else }}
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/>
-            <line x1="9" y1="3" x2="9" y2="18"/>
-            <line x1="15" y1="6" x2="15" y2="21"/>
-          </svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/><line x1="9" y1="3" x2="9" y2="18"/><line x1="15" y1="6" x2="15" y2="21"/></svg>
           {{ end }}
         </div>
         <h3 class="card-title">{{ .title }}</h3>
         <p class="card-desc">{{ .description }}</p>
-        <a href="https://georgesmatar.github.io/neuroconnect/research/" class="card-link">Learn more →</a>
       </div>
       {{ end }}
     </div>
   </div>
-</section>
-
-<!-- FEATURED VISUAL SECTION -->
-<section class="section visual-section">
-  <div class="container">
+  <div class="container" style="margin-top:64px;">
     <div class="visual-grid">
       <div class="visual-text" data-aos="fade-right">
         <span class="section-tag">Our Approach</span>
@@ -103,73 +82,274 @@
           <li><span class="feature-dot"></span>Responsive neurostimulation (RNS)</li>
           <li><span class="feature-dot"></span>Computational seizure network modeling</li>
         </ul>
-        <a href="https://georgesmatar.github.io/neuroconnect/research/" class="btn btn-primary">Our Methods</a>
+        <a href="/neuroconnect/research/" class="btn btn-primary">Full Research Page →</a>
       </div>
       <div class="visual-art" data-aos="fade-left">
         <div class="brain-viz">
           <div class="brain-photo-wrap">
-            <img src="https://georgesmatar.github.io/neuroconnect/images/brain-scan.jpg" alt="Brain MRI scan showing seizure onset zones" class="brain-photo">
-            <div class="brain-photo-overlay">
-              <span class="scan-label">SEEG · iEEG · MRI</span>
-            </div>
+            <img src="https://georgesmatar.github.io/neuroconnect/images/brain-scan.jpg" alt="Brain MRI scan" class="brain-photo">
+            <div class="brain-photo-overlay"><span class="scan-label">SEEG · iEEG · MRI</span></div>
           </div>
-        </div>
-        <div class="brain-viz brain-viz--hidden">
-          <svg class="brain-svg" viewBox="0 0 400 380" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <radialGradient id="brainGrad" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.2"/>
-                <stop offset="100%" stop-color="#0a0e1a" stop-opacity="0"/>
-              </radialGradient>
-              <filter id="glow">
-                <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-                <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
-              </filter>
-            </defs>
-            <!-- Brain outline -->
-            <ellipse cx="200" cy="190" rx="170" ry="160" fill="url(#brainGrad)" stroke="#1a2a4a" stroke-width="1"/>
-            <!-- Sulci lines -->
-            <path d="M100 120 Q130 100 160 120 Q190 140 220 120 Q250 100 280 120" stroke="#00d4ff" stroke-width="1" fill="none" opacity="0.4" filter="url(#glow)"/>
-            <path d="M80 160 Q120 140 160 160 Q200 180 240 160 Q280 140 310 160" stroke="#00d4ff" stroke-width="1" fill="none" opacity="0.4"/>
-            <path d="M90 200 Q130 185 170 200 Q210 215 250 200 Q290 185 320 200" stroke="#00d4ff" stroke-width="1" fill="none" opacity="0.4"/>
-            <path d="M100 240 Q140 225 180 240 Q220 255 260 240 Q290 228 310 240" stroke="#00d4ff" stroke-width="1" fill="none" opacity="0.3"/>
-            <!-- SEEG electrodes -->
-            <g filter="url(#glow)">
-              <line x1="160" y1="80" x2="155" y2="220" stroke="#ff6b35" stroke-width="2" opacity="0.8"/>
-              <circle cx="155" cy="220" r="4" fill="#ff6b35" opacity="0.9"/>
-              <circle cx="155" cy="195" r="3" fill="#ff6b35" opacity="0.7"/>
-              <circle cx="157" cy="170" r="3" fill="#ff6b35" opacity="0.7"/>
-              <circle cx="158" cy="145" r="3" fill="#ff6b35" opacity="0.5"/>
-
-              <line x1="240" y1="75" x2="245" y2="230" stroke="#ff6b35" stroke-width="2" opacity="0.8"/>
-              <circle cx="245" cy="230" r="4" fill="#ff6b35" opacity="0.9"/>
-              <circle cx="244" cy="205" r="3" fill="#ff6b35" opacity="0.7"/>
-              <circle cx="243" cy="180" r="3" fill="#ff6b35" opacity="0.5"/>
-
-              <line x1="200" y1="70" x2="200" y2="240" stroke="#00d4ff" stroke-width="2" opacity="0.8"/>
-              <circle cx="200" cy="240" r="5" fill="#00d4ff" opacity="1"/>
-              <circle cx="200" cy="215" r="4" fill="#00d4ff" opacity="0.8"/>
-              <circle cx="200" cy="190" r="4" fill="#00d4ff" opacity="0.6"/>
-              <circle cx="200" cy="165" r="3" fill="#00d4ff" opacity="0.5"/>
-            </g>
-            <!-- Seizure zone pulse -->
-            <circle cx="200" cy="240" r="20" fill="none" stroke="#00d4ff" stroke-width="1.5" opacity="0.6" class="pulse-ring"/>
-            <circle cx="200" cy="240" r="35" fill="none" stroke="#00d4ff" stroke-width="1" opacity="0.3" class="pulse-ring-2"/>
-            <!-- EEG trace on brain -->
-            <path d="M120 300 L135 300 L140 285 L145 315 L150 280 L155 320 L160 300 L200 300 L215 300 L220 288 L225 312 L230 300 L270 300" stroke="#00d4ff" stroke-width="1.5" fill="none" opacity="0.7" filter="url(#glow)"/>
-            <!-- Labels -->
-            <text x="165" y="255" fill="#ff6b35" font-size="10" font-family="Inter" opacity="0.9">SOZ</text>
-            <text x="120" y="340" fill="#00d4ff" font-size="9" font-family="Inter" opacity="0.7">iEEG recording</text>
-          </svg>
-        </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- LATEST NEWS -->
-<section class="section news-section">
+<!-- ═══════════════════════════════════════════
+     TEAM
+═══════════════════════════════════════════ -->
+<section class="section hs-section" id="team">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">The People</span>
+      <h2 class="section-title">Our Team</h2>
+      <p class="section-subtitle">Neurosurgeons, neurologists, engineers, and trainees united by a shared mission.</p>
+    </div>
+
+    {{ $pis := where (where site.RegularPages "Section" "team") "Params.role" "Co-Principal Investigator" }}
+    {{ if $pis }}
+    <div class="hs-pi-row">
+      {{ range $pis }}
+      <div class="hs-pi-card" data-aos="fade-up">
+        <div class="hs-pi-photo">
+          {{ if .Params.image }}<img src="{{ .Params.image | strings.TrimPrefix "/" | absURL }}" alt="{{ .Title }}" loading="lazy">
+          {{ else }}<div class="hs-pi-initials">{{ substr .Title 3 2 }}</div>{{ end }}
+        </div>
+        <div class="hs-pi-info">
+          <div class="hs-pi-name">{{ .Title }}</div>
+          <div class="hs-pi-role">{{ .Params.role }}</div>
+          <div class="hs-pi-affil">{{ .Params.affiliation }}</div>
+          <p class="hs-pi-bio">{{ .Content | plainify | truncate 180 }}</p>
+          <div class="hs-pi-links">
+            {{ if .Params.pubmed }}<a href="{{ .Params.pubmed }}" target="_blank" rel="noopener" class="pi-link-btn">PubMed</a>{{ end }}
+            {{ if .Params.scholar }}<a href="{{ .Params.scholar }}" target="_blank" rel="noopener" class="pi-link-btn">Scholar</a>{{ end }}
+            {{ if .Params.email }}<a href="mailto:{{ .Params.email }}" class="pi-link-btn">Email</a>{{ end }}
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
+
+    {{ $grads := where (where site.RegularPages "Section" "team") "Params.role" "in" (slice "PhD Student" "MSc Student" "Postdoctoral Researcher (AI / iEEG)" "Research Coordinator / MSc Student") }}
+    {{ if $grads }}
+    <div class="hs-grad-grid" style="margin-top:40px;" data-aos="fade-up">
+      {{ range $grads }}
+      <div class="hs-member-chip">
+        <div class="hs-chip-avatar">
+          {{ if .Params.image }}<img src="{{ .Params.image | strings.TrimPrefix "/" | absURL }}" alt="{{ .Title }}" loading="lazy">
+          {{ else }}<div class="hs-chip-initials">{{ substr .Title 0 2 }}</div>{{ end }}
+        </div>
+        <div class="hs-chip-info">
+          <div class="hs-chip-name">{{ .Title }}</div>
+          <div class="hs-chip-role">{{ .Params.role }}</div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
+
+    <div class="section-cta" data-aos="fade-up">
+      <a href="/neuroconnect/team/" class="btn btn-outline">Full Team Page →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     PUBLICATIONS
+═══════════════════════════════════════════ -->
+<section class="section hs-section hs-alt" id="publications">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">Science</span>
+      <h2 class="section-title">Recent Publications</h2>
+      <p class="section-subtitle">214+ peer-reviewed articles. h-index 39. Selected highlights from the past year.</p>
+    </div>
+    <div class="hs-pub-list">
+      {{ range first 6 site.Data.publications_lab.items }}
+      <div class="hs-pub-item" data-aos="fade-up">
+        <div class="hs-pub-journal">{{ .journal_name }}</div>
+        <div class="hs-pub-title">
+          {{ if .doi }}<a href="{{ .doi }}" target="_blank" rel="noopener">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}
+        </div>
+        <div class="hs-pub-authors">{{ .authors | safeHTML }}</div>
+        <div class="hs-pub-citation">{{ .citation }}</div>
+      </div>
+      {{ end }}
+    </div>
+    <div class="section-cta" data-aos="fade-up">
+      <a href="/neuroconnect/publications/" class="btn btn-outline">All Publications →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     PROJECTS
+═══════════════════════════════════════════ -->
+<section class="section hs-section" id="projects">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">Active Work</span>
+      <h2 class="section-title">Current Projects</h2>
+      <p class="section-subtitle">Ongoing research spanning AI, SEEG analytics, neuromodulation, and surgical outcomes.</p>
+    </div>
+    <div class="hs-proj-grid">
+      {{ range first 6 site.Data.projects.items }}
+      <div class="hs-proj-card" data-aos="fade-up">
+        <div class="hs-proj-status {{ if eq .status `Active` }}status-active{{ else }}status-other{{ end }}">{{ .status }}</div>
+        <div class="hs-proj-section">{{ .section }}</div>
+        <h3 class="hs-proj-title">{{ .title }}</h3>
+        <p class="hs-proj-desc">{{ .description | truncate 120 }}</p>
+        <div class="hs-proj-tags">
+          {{ range .tags }}<span class="hs-tag">{{ . }}</span>{{ end }}
+        </div>
+      </div>
+      {{ end }}
+    </div>
+    <div class="section-cta" data-aos="fade-up">
+      <a href="/neuroconnect/projects/" class="btn btn-outline">All Projects →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     AWARDS & TALKS
+═══════════════════════════════════════════ -->
+<section class="section hs-section hs-alt" id="achievements">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">Recognition</span>
+      <h2 class="section-title">Awards &amp; Talks</h2>
+      <p class="section-subtitle">Selected honours and invited lectures recognising the lab's scientific impact.</p>
+    </div>
+    <div class="hs-awards-grid">
+      {{ range first 6 site.Data.awards.items }}
+      <div class="hs-award-card" data-aos="fade-up">
+        <div class="hs-award-year">{{ .year }}</div>
+        <div class="hs-award-title">{{ .title }}</div>
+        <div class="hs-award-org">{{ .organization }}</div>
+      </div>
+      {{ end }}
+    </div>
+    <div class="section-cta" data-aos="fade-up">
+      <a href="/neuroconnect/achievements/" class="btn btn-outline">Awards &amp; Talks Page →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     OUTREACH
+═══════════════════════════════════════════ -->
+<section class="section hs-section" id="outreach">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">Beyond the Lab</span>
+      <h2 class="section-title">Community Outreach</h2>
+      <p class="section-subtitle">Humanitarian missions, public education, and media engagement.</p>
+    </div>
+    <div class="hs-outreach-grid">
+      <div class="hs-outreach-card" data-aos="fade-up">
+        <div class="hs-outreach-flag">🇭🇹</div>
+        <h3>Haiti Neurosurgery &amp; Epilepsy Missions</h3>
+        <p>Dr. Weil led surgical and epilepsy missions to Haiti (2017–2018) with CHU Sainte-Justine and CHUM teams — operating, running clinics, and teaching Haitian residents at the Université Notre-Dame d'Haïti.</p>
+      </div>
+      <div class="hs-outreach-card" data-aos="fade-up">
+        <div class="hs-outreach-flag">📺</div>
+        <h3>Media &amp; Public Engagement</h3>
+        <p>Featured on <em>Tout le monde en parle</em> (Radio-Canada), La Presse, Le Devoir, and Radio-Canada Première. Patient stories have reached hundreds of thousands of Quebecers.</p>
+      </div>
+      <div class="hs-outreach-card" data-aos="fade-up">
+        <div class="hs-outreach-flag">🎓</div>
+        <h3>Education &amp; Teaching</h3>
+        <p>Dr. Weil directs the Pediatric Neurosurgery Fellowship Program at CHUSJ (since 2016) and teaches formal UdeM courses. 15,000+ teaching hours since 2020 across clinical, academic, and international settings.</p>
+      </div>
+      <div class="hs-outreach-card" data-aos="fade-up">
+        <div class="hs-outreach-flag">🇺🇦</div>
+        <h3>Child Neurologists Unite for Ukraine</h3>
+        <p>Dr. Hadjinicolaou co-organized an initiative connecting child neurologists with Ukrainian colleagues displaced by the conflict, providing teleconsultation and professional support.</p>
+      </div>
+    </div>
+    <div class="section-cta" data-aos="fade-up">
+      <a href="/neuroconnect/outreach/" class="btn btn-outline">Full Outreach Page →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     COLLABORATORS
+═══════════════════════════════════════════ -->
+<section class="section hs-section hs-alt" id="collaborators">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">Our Network</span>
+      <h2 class="section-title">Collaborators</h2>
+      <p class="section-subtitle">Three international research consortia and partners across two continents.</p>
+    </div>
+    <div class="hs-consortia-row">
+      <div class="hs-consortium-chip" data-aos="fade-up">
+        <div class="hs-consortium-name">CONNECTiVOS</div>
+        <div class="hs-consortium-desc">Multi-centre VNS &amp; DBS outcomes in children — 15+ North American sites. Published in <em>Nature Communications</em> 2026.</div>
+      </div>
+      <div class="hs-consortium-chip" data-aos="fade-up">
+        <div class="hs-consortium-name">MELD Project</div>
+        <div class="hs-consortium-desc">International automated MRI lesion detection — 30+ sites across Europe, Americas &amp; Asia.</div>
+      </div>
+      <div class="hs-consortium-chip" data-aos="fade-up">
+        <div class="hs-consortium-name">CHILD-DBS Registry</div>
+        <div class="hs-consortium-desc">Canada &amp; USA registry for deep brain stimulation in children across epilepsy &amp; movement disorders.</div>
+      </div>
+    </div>
+    <div class="hs-institutions-row" data-aos="fade-up">
+      {{ $institutions := slice "SickKids · Toronto" "UCLA · Los Angeles" "McGill · Montréal" "Polytechnique · Montréal" "Harvard · Boston" "UNDH · Haïti" "CHUM · Montréal" "UdeM · Montréal" }}
+      {{ range $institutions }}
+      <span class="hs-inst-badge">{{ . }}</span>
+      {{ end }}
+    </div>
+    <div class="section-cta" data-aos="fade-up">
+      <a href="/neuroconnect/collaborators/" class="btn btn-outline">Full Collaborators Page →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     FUNDING
+═══════════════════════════════════════════ -->
+<section class="section hs-section" id="funding">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">Research Support</span>
+      <h2 class="section-title">Funding &amp; Support</h2>
+      <p class="section-subtitle">$6.5M+ in active grants supporting our research and trainees.</p>
+    </div>
+    <div class="hs-funding-stats" data-aos="fade-up">
+      <div class="hs-fstat"><span class="hs-fstat-num">$6.5M+</span><span class="hs-fstat-label">Total grants since 2020</span></div>
+      <div class="hs-fstat"><span class="hs-fstat-num">$1.2M+</span><span class="hs-fstat-label">Direct lab funding</span></div>
+      <div class="hs-fstat"><span class="hs-fstat-num">9+</span><span class="hs-fstat-label">Funding sources</span></div>
+      <div class="hs-fstat"><span class="hs-fstat-num">7</span><span class="hs-fstat-label">Student scholarships</span></div>
+    </div>
+    <div class="hs-funders-row" data-aos="fade-up">
+      {{ $funders := slice "CIHR / IRSC" "FRQS" "FRQNT" "CHUSJ · Centre Imagine" "Chaire Édouard Boivin" "Power Corporation" "Fondation Savoy" "Fondation Marie-Robert" }}
+      {{ range $funders }}
+      <span class="hs-funder-badge">{{ . }}</span>
+      {{ end }}
+    </div>
+    <div class="hs-donate-strip" data-aos="fade-up">
+      <div class="hs-donate-text">
+        <strong>Support our research</strong> — The <em>Fonds Dr Alexander Weil</em> at the Fondation CHU Sainte-Justine funds research directly benefiting children with drug-resistant epilepsy.
+      </div>
+      <a href="https://fondation.chusj.org/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Donate →</a>
+    </div>
+    <div class="section-cta" data-aos="fade-up">
+      <a href="/neuroconnect/funding/" class="btn btn-outline">Full Funding Page →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     NEWS
+═══════════════════════════════════════════ -->
+<section class="section news-section hs-alt" id="news">
   <div class="container">
     <div class="section-header" data-aos="fade-up">
       <span class="section-tag">Latest Updates</span>
@@ -184,7 +364,7 @@
         {{ else if .Params.journal_color }}
         <div class="news-card-journal-banner" style="--jcolor: {{ .Params.journal_color }}">
           <span class="ncjb-name">{{ .Params.journal | default .Params.category }}</span>
-          <svg class="ncjb-icon" viewBox="0 0 60 40" fill="none"><circle cx="20" cy="20" r="12" stroke="currentColor" stroke-width="1.5" opacity="0.4"/><circle cx="20" cy="20" r="6" stroke="currentColor" stroke-width="1.5" opacity="0.6"/><line x1="32" y1="20" x2="55" y2="20" stroke="currentColor" stroke-width="1.5" opacity="0.5"/><line x1="32" y1="14" x2="50" y2="14" stroke="currentColor" stroke-width="1" opacity="0.3"/><line x1="32" y1="26" x2="48" y2="26" stroke="currentColor" stroke-width="1" opacity="0.3"/></svg>
+          <svg class="ncjb-icon" viewBox="0 0 60 40" fill="none"><circle cx="20" cy="20" r="12" stroke="currentColor" stroke-width="1.5" opacity="0.4"/><circle cx="20" cy="20" r="6" stroke="currentColor" stroke-width="1.5" opacity="0.6"/><line x1="32" y1="20" x2="55" y2="20" stroke="currentColor" stroke-width="1.5" opacity="0.5"/></svg>
         </div>
         {{ end }}
         <div class="news-meta">
@@ -195,43 +375,79 @@
         <p class="news-summary">{{ .Summary | plainify | truncate 120 }}</p>
         <a href="{{ .RelPermalink }}" class="card-link">Read more →</a>
       </article>
-      {{ else }}
-      <article class="news-card" data-aos="fade-up">
-        <div class="news-meta"><time>May 2025</time><span class="news-tag">Research</span></div>
-        <h3 class="news-title">NeuroConnect Lab launches new SEEG research program</h3>
-        <p class="news-summary">Our lab has initiated a prospective study on high-frequency oscillations as biomarkers for epileptogenic tissue in drug-resistant focal epilepsy.</p>
-        <a href="https://georgesmatar.github.io/neuroconnect/news/" class="card-link">Read more →</a>
-      </article>
-      <article class="news-card" data-aos="fade-up">
-        <div class="news-meta"><time>April 2025</time><span class="news-tag">Publication</span></div>
-        <h3 class="news-title">New paper on seizure network dynamics published</h3>
-        <p class="news-summary">Our latest work in Brain Communications reveals novel patterns of seizure propagation in temporal lobe epilepsy using multivariate connectivity analysis.</p>
-        <a href="https://georgesmatar.github.io/neuroconnect/news/" class="card-link">Read more →</a>
-      </article>
-      <article class="news-card" data-aos="fade-up">
-        <div class="news-meta"><time>March 2025</time><span class="news-tag">Award</span></div>
-        <h3 class="news-title">Lab receives CIHR funding for epilepsy surgery outcomes</h3>
-        <p class="news-summary">We are proud to announce a 3-year CIHR grant to study long-term cognitive and seizure outcomes following epilepsy surgery in paediatric and adult populations.</p>
-        <a href="https://georgesmatar.github.io/neuroconnect/news/" class="card-link">Read more →</a>
-      </article>
       {{ end }}
     </div>
     <div class="section-cta">
-      <a href="https://georgesmatar.github.io/neuroconnect/news/" class="btn btn-outline">View All News</a>
+      <a href="/neuroconnect/news/" class="btn btn-outline">All News →</a>
     </div>
   </div>
 </section>
 
-<!-- JOIN CTA -->
-<section class="section cta-section">
+<!-- ═══════════════════════════════════════════
+     CONTACT
+═══════════════════════════════════════════ -->
+<section class="section hs-section" id="contact">
   <div class="container">
-    <div class="cta-box" data-aos="fade-up">
-      <div class="cta-glow"></div>
-      <h2>Join the NeuroConnect Lab</h2>
-      <p>We are always looking for motivated graduate students, postdocs, and clinical fellows passionate about epilepsy research and surgical innovation.</p>
-      <div class="cta-actions">
-        <a href="https://georgesmatar.github.io/neuroconnect/contact/" class="btn btn-primary">Get in Touch</a>
-        <a href="{{ site.Params.github }}" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">Get In Touch</span>
+      <h2 class="section-title">Contact Us</h2>
+      <p class="section-subtitle">We welcome inquiries from prospective students, collaborators, and patients.</p>
+    </div>
+    <div class="hs-contact-grid" data-aos="fade-up">
+      <div class="hs-contact-form-wrap">
+        <form class="contact-form" action="https://formspree.io/f/mlgvdrag" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="hs-name">Name</label>
+              <input type="text" id="hs-name" name="name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label for="hs-email">Email</label>
+              <input type="email" id="hs-email" name="email" placeholder="your@email.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="hs-subject">Subject</label>
+            <select id="hs-subject" name="subject">
+              <option value="">Select a topic…</option>
+              <option value="Graduate Studies">Graduate Studies (MSc / PhD)</option>
+              <option value="Postdoctoral Fellowship">Postdoctoral Fellowship</option>
+              <option value="Clinical Fellowship">Clinical Fellowship</option>
+              <option value="Research Collaboration">Research Collaboration</option>
+              <option value="Patient Inquiry">Patient / Clinical Inquiry</option>
+              <option value="Media">Media &amp; Press</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="hs-message">Message</label>
+            <textarea id="hs-message" name="message" rows="5" placeholder="Tell us about yourself and your inquiry." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;">Send Message</button>
+        </form>
+      </div>
+      <div class="hs-contact-info">
+        <div class="hs-contact-block">
+          <div class="hs-contact-label">Principal Investigator</div>
+          <div class="hs-contact-value">Dr. Alexander Weil</div>
+          <div class="hs-contact-sub">Pediatric Neurosurgeon &amp; Clinician-Scientist</div>
+        </div>
+        <div class="hs-contact-block">
+          <div class="hs-contact-label">Institution</div>
+          <div class="hs-contact-value">CHU Sainte-Justine</div>
+          <div class="hs-contact-sub">3175 Chemin de la Côte-Sainte-Catherine<br>Montréal, QC H3T 1C5</div>
+        </div>
+        <div class="hs-contact-block">
+          <div class="hs-contact-label">Email</div>
+          <a href="mailto:alexander.weil@umontreal.ca" class="hs-contact-value hs-contact-link">alexander.weil@umontreal.ca</a>
+        </div>
+        <div class="hs-contact-block">
+          <div class="hs-contact-label">Affiliations</div>
+          <div class="hs-contact-value" style="font-size:0.85rem; line-height:1.6;">
+            Université de Montréal · CHUM<br>
+            Polytechnique Montréal · McGill University
+          </div>
+        </div>
       </div>
     </div>
   </div>
