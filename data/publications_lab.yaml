@@ -1,0 +1,137 @@
+items:
+  - year: 2026
+    journal_name: "Journal of Child Neurology"
+    title: "Motor Recovery After a Hemispherectomy: Review of Mechanisms and the Potential of Neuromodulation to Enhance Motor Outcomes"
+    authors: "<strong>Bergeron D</strong>, Barthélemy D, Hadjinicolaou A, Bonizzato M, Martinez M, Dancause N, <strong>Weil AG*</strong>"
+    citation: "J Child Neurol. 2026 Feb 13. doi: 10.1177/08830738251413830"
+    doi: "https://doi.org/10.1177/08830738251413830"
+  
+  - year: 2026
+    journal_name: "World Neurosurgery"
+    title: "Awake surgery for intrinsic cerebellar tumor involving the middle cerebellar peduncle"
+    authors: "Bojanowski MW, Mrichi S, Martin T, El Hage G, Theaud G, <strong>Weil AG</strong>, Westwick H, Obaid S"
+    citation: "World Neurosurg. 2026 Feb;206:124750. doi: 10.1016/j.wneu.2025.124750"
+    doi: "https://doi.org/10.1016/j.wneu.2025.124750"
+  
+  - year: 2025
+    journal_name: "Journal of Neurosurgery"
+    title: "Central thalamic deep brain stimulation for disorders of consciousness: an individual participant data meta-analysis"
+    authors: "<strong>Bergeron D</strong>, Mithani K, Raguž M, Chudy D, Huang Y, Hadjinicolaou A, Iorio-Morin C, Fournier-Gosselin MP, Obaid S, Ibrahim GM, <strong>Weil AG*</strong>"
+    citation: "J Neurosurg. 2025 Jul 18;143(5):1217–1226. doi: 10.3171/2025.3.JNS241092"
+    doi: "https://doi.org/10.3171/2025.3.JNS241092"
+  
+  - year: 2025
+    journal_name: "Epilepsia"
+    title: "What defines response to vagus nerve stimulation in children with drug-resistant epilepsy? A prospective cohort study from the CONNECTiVOS collaboration"
+    authors: "<strong>Niazi F</strong>, Mithani K, Suresh H, …, <strong>Weil AG</strong>, …, Ibrahim GM"
+    citation: "Epilepsia. 2025 Jun 26. doi: 10.1111/epi.18520"
+    doi: "https://doi.org/10.1111/epi.18520"
+  
+  - year: 2025
+    journal_name: "Frontiers in Physiology"
+    title: "Vagus nerve stimulation as a potential treatment for acute asthmatic bronchoconstriction: a systematic review"
+    authors: "Di Flumeri E, Ducharme FM, St-Pierre J, <strong>Niazi F</strong>, …, <strong>Weil AG*</strong>, Iorio-Morin C"
+    citation: "Front Physiol. 2025;16:1625871. doi: 10.3389/fphys.2025.1625871"
+    doi: "https://doi.org/10.3389/fphys.2025.1625871"
+  
+  - year: 2024
+    journal_name: "Epilepsia"
+    title: "Development of an online calculator for seizure freedom following pediatric hemispherectomy (HOPS)"
+    authors: "<strong>Weil AG*</strong>, Dimentberg E, Lewis E, Ibrahim GM, Kola O, …, Fallah A"
+    citation: "Epilepsia. 2024;65(1):46–56"
+  
+  - year: 2024
+    journal_name: "Pediatric Epilepsy Surgery Techniques (Book)"
+    title: "Pediatric Epilepsy Surgery Techniques: Controversies and Evidence (Editors)"
+    authors: "Fallah A, Ibrahim GM, <strong>Weil AG</strong> (Editors)"
+    citation: "Elsevier, 2024"
+  
+  - year: 2024
+    journal_name: "BMJ Open"
+    title: "Outcomes following surgical interventions for hypothalamic hamartomas: protocol for a systematic review and individual patient data meta-analysis"
+    authors: "Goel K, <strong>Niazi F</strong>, Chen JS, Hadjinicolaou A, Keezer M, Gallagher A, Fallah A, <strong>Weil AG*</strong>"
+    citation: "BMJ Open. 2024 Feb 12;14(2):e080870. doi: 10.1136/bmjopen-2023-080870"
+    doi: "https://doi.org/10.1136/bmjopen-2023-080870"
+  
+  - year: 2024
+    journal_name: "Frontiers in Neurology"
+    title: "Outcome of Emergency Neurosurgery in Patients with Refractory and Super-Refractory Status Epilepticus: A Systematic Review and Individual Participant Data Meta-Analysis"
+    authors: "<strong>Niazi F</strong>, Han A, Stamm L, Shlobin NA, …, Hadjinicolaou A, <strong>Weil AG*</strong>"
+    citation: "Front Neurol. 2024;15:1403266. doi: 10.3389/fneur.2024.1403266"
+    doi: "https://doi.org/10.3389/fneur.2024.1403266"
+  
+  - year: 2024
+    journal_name: "Frontiers in Neurology"
+    title: "Outcomes following resective and disconnective strategies in the treatment of epileptic spasms: a systematic review and individual patient data meta-analysis"
+    authors: "Cottier R, <strong>Niazi F</strong>, Goël K, Korman C, …, Fallah A, <strong>Weil AG*</strong>, Hadjinicolaou A*"
+    citation: "Front Neurol. 2024;15:1518554. doi: 10.3389/fneur.2024.1518554"
+    doi: "https://doi.org/10.3389/fneur.2024.1518554"
+  
+  - year: 2024
+    journal_name: "Operative Neurosurgery"
+    title: "Brain Stiffness Correlates With Pathological Tissue in Patients With Drug-Resistant Epilepsy Due to Rasmussen Encephalitis and Focal Cortical Dysplasia"
+    authors: "<strong>Brunette-Clément T</strong>, Chang JW, Owens GC, Hadjinicolaou A, <strong>Weil AG</strong>, Fallah A"
+    citation: "Oper Neurosurg. 2024 Sep 27. doi: 10.1227/ons.0000000000001387"
+    doi: "https://doi.org/10.1227/ons.0000000000001387"
+  
+  - year: 2023
+    journal_name: "Epilepsia"
+    title: "Seizure outcome of pediatric MR-guided laser interstitial thermal therapy versus open surgery: matched noninferiority cohort study"
+    authors: "Yossofzai O, Stone S, Madsen J, …, Perry MS, <strong>Weil AG</strong>, …, Fallah A, Ibrahim GM, Drake J"
+    citation: "Epilepsia. 2023;64(1):114–126"
+  
+  - year: 2023
+    journal_name: "Seizure"
+    title: "Long-term full-scale intelligent quotient outcomes following pediatric and childhood epilepsy surgery: A systematic review and meta-analysis"
+    authors: "Arfaie S, Amin P, Kwan ATH, …, <strong>Weil AG</strong>, Fallah A"
+    citation: "Seizure. 2023 Mar;106:58–67. doi: 10.1016/j.seizure.2023.01.020"
+    doi: "https://doi.org/10.1016/j.seizure.2023.01.020"
+  
+  - year: 2022
+    journal_name: "JAMA Network Open"
+    title: "Extent of Tumor Resection and Survival in Pediatric Patients With High-Grade Gliomas: A Systematic Review and Meta-analysis"
+    authors: "Hatoum R, Chen JS, Lavergne P, Shlobin NA, …, Fallah A, Venne D, Perreault S, …, Jabado N, Dudley RW, <strong>Weil AG*</strong>"
+    citation: "JAMA Netw Open. 2022;5(8):e2226551. doi: 10.1001/jamanetworkopen.2022.26551"
+    doi: "https://doi.org/10.1001/jamanetworkopen.2022.26551"
+  
+  - year: 2021
+    journal_name: "Epilepsia"
+    title: "Hemispherectomy Outcome Prediction Scale: Development and validation of a seizure freedom prediction tool"
+    authors: "<strong>Weil AG*</strong>, Lewis EC, Ibrahim GM, Kola O, Tseng CH, …, Fallah A"
+    citation: "Epilepsia. 2021;62(5):1064–1073. doi: 10.1111/epi.16861"
+    doi: "https://doi.org/10.1111/epi.16861"
+  
+  - year: 2021
+    journal_name: "Neurobiology of Disease"
+    title: "Transduction of inflammation from peripheral immune cells to the hippocampus induces neural hyperexcitability mediated by Caspase-1 activation"
+    authors: "Shaker T, Bidisha C, Amilhon B, Di Cristo G, <strong>Weil AG*</strong>"
+    citation: "Neurobiol Dis. 2021;160:105535. doi: 10.1016/j.nbd.2021.105535"
+    doi: "https://doi.org/10.1016/j.nbd.2021.105535"
+  
+  - year: 2020
+    journal_name: "Journal of Neurosurgery: Pediatrics"
+    title: "Successful treatment of non-midline primary malignant germ cell tumors with yolk sac components in neonates"
+    authors: "<strong>Weil AG*</strong>, Mathews N, Farmer JP, St-Martin C, Albrecht S, Jabado N, Dudley RW"
+    citation: "J Neurosurg Pediatr. 2020;1–5. doi: 10.3171/2020.3.PEDS19749"
+    doi: "https://doi.org/10.3171/2020.3.PEDS19749"
+  
+  - year: 2019
+    journal_name: "Pediatric Neurology"
+    title: "Seizures in pediatric patients with primary brain tumors"
+    authors: "Robert-Boire V, Desnous B, Lortie A, Carmant L, Ellezam B, <strong>Weil A</strong>, Perreault S"
+    citation: "Pediatr Neurol. 2019 Nov;100:67–73. doi: 10.1016/j.pediatrneurol.2019.07.012"
+    doi: "https://doi.org/10.1016/j.pediatrneurol.2019.07.012"
+  
+  - year: 2018
+    journal_name: "Neurosurgery"
+    title: "Individual participant data meta-analysis of surgery for insular epilepsy: resection methodology and predictors of seizure freedom"
+    authors: "Obaid S, Zerouali I, Hadjinicolaou A, <strong>Weil AG*</strong>"
+    citation: "Neurosurgery. 2019 Jun 1;84(6):1192–1204. doi: 10.1093/neuros/nyy368"
+    doi: "https://doi.org/10.1093/neuros/nyy368"
+  
+  - year: 2018
+    journal_name: "Journal of Neurosurgery: Pediatrics"
+    title: "The supracerebellar transtentorial approach to temporomesial lesions: a prospective series of 24 patients"
+    authors: "Lavoie P, Zogbi E, Hadjinicolaou A, Lapalme-Remis S, <strong>Weil AG*</strong>"
+    citation: "J Neurosurg Pediatr. 2019;23(4):455–463. doi: 10.3171/2018.10.PEDS18432"
+    doi: "https://doi.org/10.3171/2018.10.PEDS18432"

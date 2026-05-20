@@ -98,3 +98,161 @@ collections:
           - { label: "Generic grey", value: "#546E7A" }
       - { label: "Summary (card teaser)", name: "summary", widget: "text", hint: "1–2 sentences shown on the news listing card. Keep under 200 characters." }
       - { label: "Full Article Body", name: "body", widget: "markdown", required: false, hint: "Full article text. Supports bold, links, headers." }
+
+  # ─────────────────────────────────────────────
+  # PUBLICATIONS — LAB PAPERS
+  # ─────────────────────────────────────────────
+  - name: "publications_lab"
+    label: "Publications — Lab Papers"
+    files:
+      - name: "lab"
+        label: "Lab Papers"
+        file: "data/publications_lab.yaml"
+        fields:
+          - name: "items"
+            label: "Publications"
+            widget: "list"
+            fields:
+              - { label: "Year", name: "year", widget: "number", value_type: "int" }
+              - { label: "Journal Name", name: "journal_name", widget: "string", hint: "Short journal name, e.g. Nature Communications" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Authors", name: "authors", widget: "string", hint: "Lab members in bold: <strong>Name</strong>. Use * for corresponding author." }
+              - { label: "Full Citation", name: "citation", widget: "string", hint: "e.g. Nat Commun. 2025;16(1):10145. doi: 10.1038/..." }
+              - { label: "DOI URL", name: "doi", widget: "string", required: false, hint: "Full URL: https://doi.org/..." }
+
+  # ─────────────────────────────────────────────
+  # PUBLICATIONS — COLLABORATIVE
+  # ─────────────────────────────────────────────
+  - name: "publications_collab"
+    label: "Publications — Collaborative"
+    files:
+      - name: "collab"
+        label: "Collaborative Papers"
+        file: "data/publications_collab.yaml"
+        fields:
+          - name: "items"
+            label: "Publications"
+            widget: "list"
+            fields:
+              - { label: "Year", name: "year", widget: "number", value_type: "int" }
+              - { label: "Journal Name", name: "journal_name", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Authors", name: "authors", widget: "string" }
+              - { label: "Full Citation", name: "citation", widget: "string" }
+              - { label: "DOI URL", name: "doi", widget: "string", required: false }
+
+  # ─────────────────────────────────────────────
+  # PROJECTS
+  # ─────────────────────────────────────────────
+  - name: "projects"
+    label: "Projects"
+    files:
+      - name: "all_projects"
+        label: "All Projects"
+        file: "data/projects.yaml"
+        fields:
+          - name: "items"
+            label: "Projects"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Category (for filter)"
+                name: "category"
+                widget: "select"
+                options:
+                  - { label: "SEEG / iEEG", value: "seeg" }
+                  - { label: "AI / Prediction", value: "ai" }
+                  - { label: "Systematic Review", value: "review" }
+                  - { label: "Clinical Study", value: "clinical" }
+                  - { label: "Case Report", value: "case" }
+              - label: "Section Heading"
+                name: "section"
+                widget: "select"
+                options:
+                  - "SEEG & iEEG Analytics"
+                  - "AI & Clinical Prediction"
+                  - "Systematic Reviews & Meta-analyses"
+                  - "Clinical Studies"
+                  - "Case Reports & Case Series"
+                  - "Research Infrastructure"
+              - { label: "Status", name: "status", widget: "string", default: "Active" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Supervisor(s)", name: "supervisor", widget: "string", required: false }
+              - { label: "Funding", name: "funding", widget: "string", required: false }
+              - { label: "Students", name: "students", widget: "string", required: false }
+              - { label: "Tags (comma-separated)", name: "tags", widget: "list", required: false }
+
+  # ─────────────────────────────────────────────
+  # AWARDS & RECOGNITION
+  # ─────────────────────────────────────────────
+  - name: "awards"
+    label: "Awards & Recognition"
+    files:
+      - name: "all_awards"
+        label: "Awards"
+        file: "data/awards.yaml"
+        fields:
+          - name: "items"
+            label: "Awards"
+            widget: "list"
+            fields:
+              - { label: "Year", name: "year", widget: "number", value_type: "int" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Organization", name: "organization", widget: "string" }
+              - { label: "Milestone (special dot)", name: "milestone", widget: "boolean", default: false, required: false }
+
+  # ─────────────────────────────────────────────
+  # INVITED TALKS
+  # ─────────────────────────────────────────────
+  - name: "talks"
+    label: "Invited Talks & Keynotes"
+    files:
+      - name: "all_talks"
+        label: "Talks"
+        file: "data/talks.yaml"
+        fields:
+          - name: "items"
+            label: "Talks"
+            widget: "list"
+            fields:
+              - { label: "Year", name: "year", widget: "number", value_type: "int" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Organization / Location", name: "organization", widget: "string" }
+              - { label: "Badge (e.g. Keynote)", name: "badge", widget: "string", required: false }
+
+  # ─────────────────────────────────────────────
+  # SESSION CHAIR ROLES
+  # ─────────────────────────────────────────────
+  - name: "sessions"
+    label: "Session Chair & Moderator Roles"
+    files:
+      - name: "all_sessions"
+        label: "Sessions"
+        file: "data/sessions.yaml"
+        fields:
+          - name: "items"
+            label: "Sessions"
+            widget: "list"
+            fields:
+              - { label: "Year", name: "year", widget: "number", value_type: "int" }
+              - { label: "Title / Role", name: "title", widget: "string" }
+              - { label: "Organization / Location", name: "organization", widget: "string" }
+
+  # ─────────────────────────────────────────────
+  # SYMPOSIA ORGANIZED
+  # ─────────────────────────────────────────────
+  - name: "symposia"
+    label: "Symposia & Courses Organized"
+    files:
+      - name: "all_symposia"
+        label: "Symposia"
+        file: "data/symposia.yaml"
+        fields:
+          - name: "items"
+            label: "Symposia"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Year / Location", name: "year_detail", widget: "string", hint: "e.g. 2026 · Esterel, QC" }
+              - { label: "Description", name: "description", widget: "string" }
+              - { label: "Badge (e.g. Upcoming)", name: "badge", widget: "string", required: false }

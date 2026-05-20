@@ -1,0 +1,131 @@
+items:
+  - year: 2026
+    journal_name: "Nature Communications"
+    title: "A deep representation learning model to predict response to vagus nerve stimulation"
+    authors: "Suresh H, Mithani K, Li V, Latypov TH, Warsi NM, Wong SM, …, Weil AG, …, Hadjinicolaou A, …, Ibrahim GM"
+    citation: "Nat Commun. 2026 Apr 7. doi: 10.1038/s41467-026-71555-0"
+    doi: "https://doi.org/10.1038/s41467-026-71555-0"
+  
+  - year: 2026
+    journal_name: "Cell Reports Medicine"
+    title: "Closed-loop modulation of sleep in children undergoing intracranial recordings"
+    authors: "Wong SM, Li V, Mithani K, Warsi NM, Suresh H, …, Weil AG, Hadjinicolaou A, …, Ibrahim GM"
+    citation: "Cell Rep Med. 2026 Jan 8:102538. doi: 10.1016/j.xcrm.2025.102538"
+    doi: "https://doi.org/10.1016/j.xcrm.2025.102538"
+  
+  - year: 2026
+    journal_name: "Movement Disorders"
+    title: "The Brain-Age Gap in Pediatric Dystonia: Neuroanatomical Deviations Inform Deep Brain Stimulation Outcomes"
+    authors: "Latypov TH, Berger A, Mohareb M, Mithani K, …, Weil AG, Fasano A, Gorodetsky C, Ibrahim GM"
+    citation: "Mov Disord. 2026 Mar 9. doi: 10.1002/mds.70262"
+    doi: "https://doi.org/10.1002/mds.70262"
+  
+  - year: 2026
+    journal_name: "Pediatric Research"
+    title: "Post-hemorrhagic ventricular dilatation in preterm infants: maximal ventricular dilatation and timing of intervention predict neurodevelopment"
+    authors: "Biran V, Groulx-Boivin E, Beltempo M, …, Dudley R, Weil A, …, Garfinkle J"
+    citation: "Pediatr Res. 2026;99:1009–1015"
+  
+  - year: 2025
+    journal_name: "Nature Communications"
+    title: "Personalized biomarkers of multiscale functional alterations in temporal lobe epilepsy"
+    authors: "Xie K, Sahlas E, Ngo A, Chen J, …, Weil AG, Grova C, Frauscher B, …, Bernhardt BC"
+    citation: "Nat Commun. 2025;16(1):10145. doi: 10.1038/s41467-025-65042-1"
+    doi: "https://doi.org/10.1038/s41467-025-65042-1"
+  
+  - year: 2025
+    journal_name: "Neurology"
+    title: "Surgical complications of deep brain stimulation in children across targets and indications: Multicenter analysis of the CHILD-DBS Registry"
+    authors: "Balachandar A, Verhey LH, Mithani K, Suresh H, …, Weil AG, Hadjinicolaou A, …, Ibrahim GM"
+    citation: "Neurology. 2025;105:e214201. doi: 10.1212/WNL.0000000000214201"
+    doi: "https://doi.org/10.1212/WNL.0000000000214201"
+  
+  - year: 2025
+    journal_name: "Epilepsia"
+    title: "Deep brain stimulation of the centromedian nucleus for drug-resistant epilepsy in children: Quality-of-life and functional outcomes from the CHILD-DBS registry"
+    authors: "Mithani K, Niazi F, Suresh H, …, Weil AG, Hadjinicolaou A, …, Ibrahim GM"
+    citation: "Epilepsia. 2025 Apr 1. doi: 10.1111/epi.18393"
+    doi: "https://doi.org/10.1111/epi.18393"
+  
+  - year: 2025
+    journal_name: "Neurology"
+    title: "Diffusion MRI tractography to reduce risks of postoperative neurological deficits: A systematic review and meta-analysis"
+    authors: "Guberman GI, Balasubramaniam N, Wilson L, …, Weil AG, …, Obaid S"
+    citation: "Neurology. 2025 Nov 11;105(9):e214145"
+  
+  - year: 2025
+    journal_name: "Stereotactic and Functional Neurosurgery"
+    title: "Deep Brain Stimulation in Pediatric Populations: A Scoping Review of the Clinical Trial Landscape"
+    authors: "Jung Y, Mithani K, Suresh H, Warsi N, …, Hadjinicolaou A, Weil A, Ibrahim GM"
+    citation: "Stereotact Funct Neurosurg. 2025;103(2):132–144. doi: 10.1159/000543289"
+    doi: "https://doi.org/10.1159/000543289"
+  
+  - year: 2024
+    journal_name: "NeuroImage: Clinical"
+    title: "Intraoperative changes in large-scale thalamic circuitry following laser ablation of hypothalamic hamartomas"
+    authors: "Mithani K, Richards OL, Ebden M, …, Weil AG, Ibrahim GM"
+    citation: "Neuroimage Clin. 2024;42:103613. doi: 10.1016/j.nicl.2024.103613"
+    doi: "https://doi.org/10.1016/j.nicl.2024.103613"
+  
+  - year: 2024
+    journal_name: "Nature Communications"
+    title: "Immune landscape of oncohistone-mutant gliomas reveals diverse myeloid populations and tumor-promoting function"
+    authors: "Andrade AF, Annett A, Karimi E, …, Weil AG, Dudley RWR, …, Jabado N"
+    citation: "Nat Commun. 2024 Sep 5;15(1):7769. doi: 10.1038/s41467-024-52096-w"
+    doi: "https://doi.org/10.1038/s41467-024-52096-w"
+  
+  - year: 2024
+    journal_name: "Clinical Cancer Research"
+    title: "Clinical characteristics and outcome of central nervous system tumors harboring NTRK gene fusions"
+    authors: "Lamoureux AA, Fisher MJ, Lemelle L, …, Weil AG, Venne D, …, Perreault S"
+    citation: "Clin Cancer Res. 2025 Feb 3;31(3):561–572. doi: 10.1158/1078-0432.CCR-24-0581"
+    doi: "https://doi.org/10.1158/1078-0432.CCR-24-0581"
+  
+  - year: 2024
+    journal_name: "Neurosurgery"
+    title: "Hemimegalencephaly: A Systematic Comparison of Functional and Anatomic Hemispherectomy for Drug-Resistant Epilepsy"
+    authors: "Goel K, Ghadiyaram A, …, Weil AG, Fallah A"
+    citation: "Neurosurgery. 2024 Apr 1;94(4):666–678. doi: 10.1227/neu.0000000000002759"
+    doi: "https://doi.org/10.1227/neu.0000000000002759"
+  
+  - year: 2022
+    journal_name: "Nature Genetics"
+    title: "K27M in canonical and noncanonical H3 variants occurs in distinct oligodendroglial cell lineages in brain midline gliomas"
+    authors: "Jessa S, Mohammadnia A, Harutyunyan AS, Hulswit M, …, Weil AG, …, Jabado N, Kleinman CL"
+    citation: "Nat Genet. 2022;54(12):1865–1880. doi: 10.1038/s41588-022-01205-w"
+    doi: "https://doi.org/10.1038/s41588-022-01205-w"
+  
+  - year: 2021
+    journal_name: "Journal of Neuro-Oncology"
+    title: "Predictors of mortality and tumor recurrence in desmoplastic infantile ganglioglioma and astrocytoma — IPDMA"
+    authors: "Wang S, Sun MZ, Abecassis IJ, Weil AG, Ibrahim GM, Fallah A, …, Wang AC"
+    citation: "J Neurooncol. 2021;155(2):155–163. doi: 10.1007/s11060-021-03849-0"
+    doi: "https://doi.org/10.1007/s11060-021-03849-0"
+  
+  - year: 2020
+    journal_name: "Cell"
+    title: "Histone H3.3G34-Mutant Interneuron Progenitors Co-opt PDGFRA for Gliomagenesis"
+    authors: "Chen CCL, Deshmukh S, Jessa S, Hadjadj D, Lisi V, …, Weil AG, …, Jabado N"
+    citation: "Cell. 2020;183(6):1617–1633. doi: 10.1016/j.cell.2020.11.012"
+    doi: "https://doi.org/10.1016/j.cell.2020.11.012"
+  
+  - year: 2019
+    journal_name: "Cancer Cell"
+    title: "Pervasive H3K27 Acetylation Leads to ERV Expression and a Therapeutic Vulnerability in H3K27M Gliomas"
+    authors: "Krug B, De Jay N, Harutyunyan AS, Deshmukh S, Marchione DM, …, Weil AG, …, Jabado N, Mack SC"
+    citation: "Cancer Cell. 2019;35(5):782–797. doi: 10.1016/j.ccell.2019.04.004"
+    doi: "https://doi.org/10.1016/j.ccell.2019.04.004"
+  
+  - year: 2019
+    journal_name: "Nature Communications"
+    title: "H3K27M induces defective chromatin spread of PRC2-mediated repressive H3K27me2/me3 and is essential for glioma tumorigenesis"
+    authors: "Harutyunyan AS, Krug B, Chen H, Papillon-Cavanagh S, Zeinieh M, …, Weil AG, …, Jabado N, Majewski J"
+    citation: "Nat Commun. 2019;10(1):1262. doi: 10.1038/s41467-019-09140-x"
+    doi: "https://doi.org/10.1038/s41467-019-09140-x"
+  
+  - year: 2019
+    journal_name: "Nature Genetics"
+    title: "Stalled developmental programs at the root of pediatric brain tumors"
+    authors: "Jessa S, Blanchet-Cohen A, Krug B, Vladoiu M, Faury D, …, Weil AG, …, Jabado N, Kleinman CL"
+    citation: "Nat Genet. 2019;51(12):1702–1713. doi: 10.1038/s41588-019-0541-4"
+    doi: "https://doi.org/10.1038/s41588-019-0541-4"

@@ -1,116 +1,123 @@
 {{ define "main" }}
 <div class="page-hero">
   <div class="container">
-    <h1 class="page-title">{{ .Title }}</h1>
-    <p class="page-subtitle">{{ .Params.subtitle }}</p>
+    <span class="section-tag">Research Output</span>
+    <h1 class="page-title" style="margin-top:12px;">Publications</h1>
+    <p class="page-subtitle">214+ peer-reviewed publications · h-index 39 · 6,341+ citations</p>
   </div>
 </div>
+
 <div class="section-content container">
 
-  <div class="pub-filters">
+  <!-- TAB NAV -->
+  <div class="pub-tab-nav">
+    <button class="pub-tab-btn active" data-tab="lab">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+      NeuroConnect Lab Papers
+    </button>
+    <button class="pub-tab-btn" data-tab="collab">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      Collaborative Publications
+    </button>
+  </div>
+
+  <!-- YEAR FILTERS (shared) -->
+  <div class="pub-filters" id="pub-filters">
     <button class="filter-btn active" data-year="">All Years</button>
     <button class="filter-btn" data-year="2026">2026</button>
     <button class="filter-btn" data-year="2025">2025</button>
     <button class="filter-btn" data-year="2024">2024</button>
     <button class="filter-btn" data-year="2023">2023</button>
     <button class="filter-btn" data-year="2022">2022</button>
+    <button class="filter-btn" data-year="2021">2021</button>
+    <button class="filter-btn" data-year="2020">2020</button>
+    <button class="filter-btn" data-year="2019">2019</button>
+    <button class="filter-btn" data-year="2018">2018</button>
   </div>
 
-  <div class="pub-list">
-
-    <div class="pub-item" data-year="2026">
-      <div class="pub-year">2026 · Nature Communications</div>
-      <div class="pub-title">A deep representation learning model to predict response to vagus nerve stimulation</div>
-      <div class="pub-authors">Suresh H, Mithani K, Li V, Latypov TH, Warsi NM, Wong SM, ..., <strong>Weil AG</strong>, ..., Ibrahim GM</div>
-      <div class="pub-journal">Nature Communications, 2026</div>
-      <div class="pub-doi"><a href="https://doi.org/10.1038/s41467-026-71555-0" target="_blank" rel="noopener">DOI: 10.1038/s41467-026-71555-0</a></div>
+  <!-- TAB 1 — LAB PAPERS -->
+  <div class="pub-tab-panel active" id="tab-lab">
+    <p class="pub-tab-desc">Papers where Dr. Weil is first, senior, or corresponding author — or where NeuroConnect Lab members lead the work under his supervision. <em>Lab members are <strong>bolded</strong>; * = corresponding author.</em></p>
+    <div class="pub-list">
+      {{ $currentYear := 0 }}
+      {{ range site.Data.publications_lab.items }}
+        {{ if ne .year $currentYear }}
+          {{ $currentYear = .year }}
+          <div class="pub-year-label">{{ $currentYear }}</div>
+        {{ end }}
+        <div class="pub-item" data-year="{{ .year }}">
+          <span class="pub-badge pub-badge-lab">Lab</span>
+          <div class="pub-year">{{ .year }} · {{ .journal_name }}</div>
+          <div class="pub-title">{{ .title }}</div>
+          <div class="pub-authors">{{ .authors | safeHTML }}</div>
+          <div class="pub-journal">{{ .citation }}</div>
+          {{ with .doi }}<div class="pub-doi"><a href="{{ . }}" target="_blank" rel="noopener">DOI →</a></div>{{ end }}
+        </div>
+      {{ end }}
     </div>
-
-    <div class="pub-item" data-year="2026">
-      <div class="pub-year">2026 · Cell Reports Medicine</div>
-      <div class="pub-title">Closed-loop modulation of sleep in children undergoing intracranial recordings</div>
-      <div class="pub-authors">Wong SM, Li V, Mithani K, Warsi NM, Suresh H, ..., <strong>Weil AG</strong>, Hadjinicolaou A, ..., Ibrahim GM</div>
-      <div class="pub-journal">Cell Reports Medicine, 7(1), 102538, 2026</div>
-      <div class="pub-doi"><a href="https://doi.org/10.1016/j.xcrm.2025.102538" target="_blank" rel="noopener">DOI: 10.1016/j.xcrm.2025.102538</a></div>
-    </div>
-
-    <div class="pub-item" data-year="2026">
-      <div class="pub-year">2026 · Scientific Reports</div>
-      <div class="pub-title">Knowledge graph representation of the mappings between seizure semiology and epileptogenic zones</div>
-      <div class="pub-authors">Yang S, Wen Z, Zhan W, ..., <strong>Weil AG</strong>, Huang X, Rosenow F, Sun H, Liu F</div>
-      <div class="pub-journal">Scientific Reports, 16, 3004, 2026</div>
-      <div class="pub-doi"><a href="https://doi.org/10.1038/s41598-025-32920-z" target="_blank" rel="noopener">DOI: 10.1038/s41598-025-32920-z</a></div>
-    </div>
-
-    <div class="pub-item" data-year="2026">
-      <div class="pub-year">2026 · Journal of Child Neurology</div>
-      <div class="pub-title">Motor recovery after hemispherectomy: Review of mechanisms and potential of neuromodulation</div>
-      <div class="pub-authors">Bergeron D, Barthélemy D, Hadjinicolaou A, Bonizzato M, Martinez M, Dancause N, <strong>Weil AG</strong></div>
-      <div class="pub-journal">Journal of Child Neurology, 2026</div>
-      <div class="pub-doi"><a href="https://doi.org/10.1177/08830738251413830" target="_blank" rel="noopener">DOI: 10.1177/08830738251413830</a></div>
-    </div>
-
-    <div class="pub-item" data-year="2025">
-      <div class="pub-year">2025 · Nature Communications</div>
-      <div class="pub-title">Personalized biomarkers of multiscale functional alterations in temporal lobe epilepsy</div>
-      <div class="pub-authors">Xie K, Sahlas E, Ngo A, Chen J, ..., <strong>Weil AG</strong>, Grova C, Frauscher B, ..., Bernhardt BC</div>
-      <div class="pub-journal">Nature Communications, 16(1), 10145, 2025</div>
-      <div class="pub-doi"><a href="https://doi.org/10.1038/s41467-025-65042-1" target="_blank" rel="noopener">DOI: 10.1038/s41467-025-65042-1</a></div>
-    </div>
-
-    <div class="pub-item" data-year="2025">
-      <div class="pub-year">2025 · Neurology</div>
-      <div class="pub-title">Surgical complications of deep brain stimulation in children across targets: Multicenter CHILD-DBS Registry analysis</div>
-      <div class="pub-authors">Balachandar A, Verhey LH, Mithani K, Suresh H, ..., <strong>Weil A</strong>, Hadjinicolaou A, ..., Ibrahim GM</div>
-      <div class="pub-journal">Neurology, 105, e214201, 2025</div>
-      <div class="pub-doi"><a href="https://doi.org/10.1212/WNL.0000000000214201" target="_blank" rel="noopener">DOI: 10.1212/WNL.0000000000214201</a></div>
-    </div>
-
-    <div class="pub-item" data-year="2025">
-      <div class="pub-year">2025 · Frontiers in Physiology</div>
-      <div class="pub-title">Vagus nerve stimulation as a potential treatment for acute asthmatic bronchoconstriction: a systematic review</div>
-      <div class="pub-authors">Di Flumeri E, Ducharme FM, St-Pierre J, Niazi F, ..., <strong>Weil AG</strong>, Iorio-Morin C</div>
-      <div class="pub-journal">Frontiers in Physiology, 16, 1625871, 2025</div>
-      <div class="pub-doi"><a href="https://doi.org/10.3389/fphys.2025.1625871" target="_blank" rel="noopener">DOI: 10.3389/fphys.2025.1625871</a></div>
-    </div>
-
-    <div class="pub-item" data-year="2024">
-      <div class="pub-year">2024 · Epilepsia</div>
-      <div class="pub-title">Development of an online calculator for seizure freedom following pediatric hemispherectomy (HOPS)</div>
-      <div class="pub-authors"><strong>Weil AG</strong>, Dimentberg E, Lewis E, Ibrahim GM, Kola O, ..., Fallah A</div>
-      <div class="pub-journal">Epilepsia, 65(1), 46–56, 2024</div>
-    </div>
-
-    <div class="pub-item" data-year="2024">
-      <div class="pub-year">2024 · Pediatric Epilepsy Surgery Techniques</div>
-      <div class="pub-title">Pediatric Epilepsy Surgery Techniques: Controversies and Evidence (Book)</div>
-      <div class="pub-authors">Fallah A, Ibrahim GM, <strong>Weil AG</strong> (Editors)</div>
-      <div class="pub-journal">Elsevier, 2024</div>
-    </div>
-
-    <div class="pub-item" data-year="2021">
-      <div class="pub-year">2021 · Epilepsia</div>
-      <div class="pub-title">Hemispherectomy Outcome Prediction Scale: Development and validation of a seizure freedom prediction tool</div>
-      <div class="pub-authors"><strong>Weil AG</strong>, Lewis EC, Ibrahim GM, Kola O, Tseng CH, ..., Fallah A</div>
-      <div class="pub-journal">Epilepsia, 62(5), 1064–1073, 2021</div>
-      <div class="pub-doi"><a href="https://doi.org/10.1111/epi.16861" target="_blank" rel="noopener">DOI: 10.1111/epi.16861</a></div>
-    </div>
-
-    <div class="pub-item" data-year="2020">
-      <div class="pub-year">2020 · Cell</div>
-      <div class="pub-title">Histone H3.3G34-mutant interneuron progenitors co-opt PDGFRA for gliomagenesis</div>
-      <div class="pub-authors">Chen CCL, Deshmukh S, Jessa S, ..., <strong>Weil AG</strong>, ..., Jabado N</div>
-      <div class="pub-journal">Cell, 183(6), 1617–1633, 2020</div>
-      <div class="pub-doi"><a href="https://doi.org/10.1016/j.cell.2020.11.012" target="_blank" rel="noopener">DOI: 10.1016/j.cell.2020.11.012</a></div>
-    </div>
-
   </div>
 
+  <!-- TAB 2 — COLLABORATIVE PUBLICATIONS -->
+  <div class="pub-tab-panel" id="tab-collab">
+    <p class="pub-tab-desc">Selected multicenter and collaborative publications where Dr. Weil contributed as a co-investigator. For a complete list see <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Weil+AG%5BAuthor%5D" target="_blank" rel="noopener">PubMed</a> or <a href="https://scholar.google.com/citations?user=_9PwUiUAAAAJ" target="_blank" rel="noopener">Google Scholar</a>.</p>
+    <div class="pub-list">
+      {{ $currentYear := 0 }}
+      {{ range site.Data.publications_collab.items }}
+        {{ if ne .year $currentYear }}
+          {{ $currentYear = .year }}
+          <div class="pub-year-label">{{ $currentYear }}</div>
+        {{ end }}
+        <div class="pub-item" data-year="{{ .year }}">
+          <span class="pub-badge pub-badge-collab">Collab</span>
+          <div class="pub-year">{{ .year }} · {{ .journal_name }}</div>
+          <div class="pub-title">{{ .title }}</div>
+          <div class="pub-authors">{{ .authors | safeHTML }}</div>
+          <div class="pub-journal">{{ .citation }}</div>
+          {{ with .doi }}<div class="pub-doi"><a href="{{ . }}" target="_blank" rel="noopener">DOI →</a></div>{{ end }}
+        </div>
+      {{ end }}
+    </div>
+  </div>
+
+  <!-- LINKS TO FULL PROFILES -->
   <div style="margin-top: 48px; padding: 24px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; text-align: center;">
-    <p style="color: var(--text-secondary); margin-bottom: 16px;">For a complete and up-to-date list of publications:</p>
-    <a href="https://scholar.google.com/scholar?q=Alexander+Weil+neurosurgery+epilepsy" target="_blank" rel="noopener" class="btn btn-outline">Google Scholar</a>
+    <p style="color: var(--text-secondary); margin-bottom: 16px;">For the complete list of 214+ publications:</p>
+    <a href="https://scholar.google.com/citations?user=_9PwUiUAAAAJ&hl=en" target="_blank" rel="noopener" class="btn btn-outline">Google Scholar</a>
     &nbsp;&nbsp;
-    <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Weil+AG%5BAuthor%5D+AND+epilepsy" target="_blank" rel="noopener" class="btn btn-outline">PubMed</a>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Weil+AG%5BAuthor%5D+AND+epilepsy&sort=date" target="_blank" rel="noopener" class="btn btn-outline">PubMed</a>
   </div>
+
 </div>
+
+<script>
+(function(){
+  document.querySelectorAll('.pub-tab-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      document.querySelectorAll('.pub-tab-btn').forEach(function(b){ b.classList.remove('active'); });
+      document.querySelectorAll('.pub-tab-panel').forEach(function(p){ p.classList.remove('active'); });
+      btn.classList.add('active');
+      document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+      document.querySelectorAll('.filter-btn').forEach(function(fb){ fb.classList.remove('active'); });
+      document.querySelector('.filter-btn[data-year=""]').classList.add('active');
+      document.querySelectorAll('.pub-item, .pub-year-label').forEach(function(el){ el.style.display = ''; });
+    });
+  });
+
+  document.querySelectorAll('.filter-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      document.querySelectorAll('.filter-btn').forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      var year = btn.dataset.year;
+      var activePanel = document.querySelector('.pub-tab-panel.active');
+      activePanel.querySelectorAll('.pub-item').forEach(function(item){
+        item.style.display = (!year || item.dataset.year === year) ? '' : 'none';
+      });
+      activePanel.querySelectorAll('.pub-year-label').forEach(function(label){
+        if (!year) { label.style.display = ''; return; }
+        label.style.display = label.textContent.trim() === year ? '' : 'none';
+      });
+    });
+  });
+})();
+</script>
 {{ end }}

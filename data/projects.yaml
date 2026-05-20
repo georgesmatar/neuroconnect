@@ -1,0 +1,199 @@
+items:
+  - title: "Virtual Epileptic Patient Cohort — SEEG Connectivity"
+    category: "seeg"
+    section: "SEEG & iEEG Analytics"
+    status: "Active"
+    description: "Analysis of seizure onset zones (SOZ), propagation zones (PZ), non-involved zones (NIZ), and non-sampled regions on stereo-EEG data. Intra- and inter-zone functional connectivity compared to age- and sex-matched healthy controls."
+    supervisor: "Dr. Georges Matar, Dr. Weil"
+    students: "Georges Matar, Xavier Carmona"
+    tags: ["SEEG", "Connectivity", "EEG Analysis"]
+  
+  - title: "Callosotomy EEG — Interhemispheric Connectivity"
+    category: "seeg"
+    section: "SEEG & iEEG Analytics"
+    status: "Active"
+    description: "Analysis of interhemispheric connectivity using different EEG biomarkers on pre-callosotomy data to better characterize the epileptic network and predict callosotomy response."
+    supervisor: "Dr. Georges Matar, Dr. Weil"
+    students: "Georges Matar, Jeanne Frédette"
+    tags: ["Callosotomy", "EEG", "Connectivity"]
+  
+  - title: "Sinks & Sources — iEEG Propagation Biomarkers"
+    category: "seeg"
+    section: "SEEG & iEEG Analytics"
+    status: "Active"
+    description: "Multi-channel iEEG analysis characterizing sinks and sources as biomarkers of seizure propagation and suppression, aimed at improving identification of the epileptogenic zone."
+    supervisor: "Dr. Georges Matar"
+    students: "Malik Amir"
+    tags: ["iEEG", "Biomarkers", "Propagation"]
+  
+  - title: "Spread — MEM Source Localization on sEEG"
+    category: "seeg"
+    section: "SEEG & iEEG Analytics"
+    status: "Active"
+    description: "Validation of Maximum Entropy on the Mean (MEM) source localization on sEEG data, using patient-specific structural connectivity and graph theory to distinguish surgically relevant from non-relevant regions of seizure spread (srROSS vs nsrROSS)."
+    supervisor: "Dr. Weil, Dr. Hadjinicolaou"
+    students: "Xavier Carmona, Duaa Ali Cheema, Cédérick Montplaisir"
+    tags: ["sEEG", "MEM", "Graph Theory", "Presurgical Evaluation"]
+  
+  - title: "CIHR-DRE Prediction — Early Drug-Resistant Epilepsy Detection"
+    category: "ai"
+    section: "AI & Clinical Prediction"
+    status: "Active"
+    description: "Machine learning-based prediction of drug-resistant epilepsy at earliest stages — before anti-seizure medication prescription. Uses clinical, EEG, and imaging features to build risk-stratification tools for prospective use."
+    supervisor: ""
+    funding: "CIHR"
+    students: "Mustafa Haddad, Raphael Hitti, Georges Matar"
+    tags: ["Machine Learning", "DRE", "Prediction", "CIHR"]
+  
+  - title: "Patient Trajectory Analysis — AI Survival Modeling"
+    category: "ai"
+    section: "AI & Clinical Prediction"
+    status: "Active"
+    description: "Survival analysis and machine learning modeling of long-term patient trajectories in drug-resistant epilepsy, integrating clinical, surgical, and outcome data to identify predictors of seizure freedom and functional outcomes."
+    supervisor: "Dr. Georges Matar"
+    students: "Ali El Jamal"
+    tags: ["Survival Analysis", "AI", "Outcomes"]
+  
+  - title: "ASM Cognition — Cognitive Effects of Anti-Seizure Medications"
+    category: "review"
+    section: "Systematic Reviews & Meta-analyses"
+    status: "Active"
+    description: "Systematic review and meta-analysis on the cognitive effects of anti-epileptic medications in children and adults, including attention, memory, language, and academic performance outcomes across drug classes."
+    supervisor: "Dr. Hadjinicolaou, Dr. Weil"
+    students: "Andrée-Anne Simard-Meilleur, Mustafa Haddad, Duaa Ali Cheema, Raphael Hitti, Meriem Hassaine, Sudarsan Packirisamy"
+    tags: ["Cognition", "ASM", "Systematic Review", "Meta-analysis"]
+  
+  - title: "Insular Epilepsy Surgery — Systematic Review & Meta-analysis"
+    category: "review"
+    section: "Systematic Reviews & Meta-analyses"
+    status: "Active"
+    description: "Comparison of outcomes following different surgical techniques for insular epilepsy (resection, disconnection, SEEG-guided ablation), synthesizing the global literature on seizure freedom and complication rates."
+    supervisor: "Dr. Weil"
+    students: "Cédérick Montplaisir"
+    tags: ["Insular Epilepsy", "Systematic Review", "Surgical Outcomes"]
+  
+  - title: "PMG / Grade Newcastle — Polymicrogyria Surgical Outcomes"
+    category: "review"
+    section: "Systematic Reviews & Meta-analyses"
+    status: "Active"
+    description: "Systematic review evaluating surgical outcomes in drug-resistant epilepsy associated with polymicrogyria (PMG), assessing the impact of lesion extent, location, and surgical approach on seizure freedom."
+    supervisor: "Dr. Weil, Dr. Hadjinicolaou"
+    students: "Raphael Hitti, Kenza Sophie Lahlou"
+    tags: ["Polymicrogyria", "Systematic Review", "Cortical Malformation"]
+  
+  - title: "IPD-DEE-SWAS — Individual Patient Data Meta-analysis"
+    category: "review"
+    section: "Systematic Reviews & Meta-analyses"
+    status: "Active"
+    description: "Individual patient data (IPD) meta-analysis on DEE-SWAS (developmental and epileptic encephalopathy with spike-and-wave activation during sleep), comparing treatment efficacy and identifying predictors of neurocognitive outcome."
+    supervisor: "Dr. Weil, Dr. Hadjinicolaou"
+    students: "Xavier Carmona, Julia Szwarcberg"
+    tags: ["DEE-SWAS", "IPD Meta-analysis", "SPSS"]
+  
+  - title: "NSM — Neurogenic Stunned Myocardium in Pediatric Epilepsy"
+    category: "review"
+    section: "Systematic Reviews & Meta-analyses"
+    status: "Active"
+    description: "Meta-analysis identifying determinants and predictors of neurogenic stunned myocardium in the pediatric epilepsy population, with implications for peri-ictal cardiac monitoring."
+    supervisor: "Dr. Weil"
+    students: "Cédérick Montplaisir"
+    tags: ["Cardiac", "SUDEP", "Meta-analysis", "Pediatric"]
+  
+  - title: "NEST — Cortical Malformations: Network Mapping & Outcomes"
+    category: "clinical"
+    section: "Clinical Studies"
+    status: "Active"
+    description: "Retrospective study of clinical evolution and treatment response in patients with cortical malformations, combined with brain network mapping from neuroimaging data to identify connectivity biomarkers of surgical outcome."
+    supervisor: "Dr. Weil, Dr. Hadjinicolaou"
+    students: "Jonah Greis, David Sigal, David Levett, Jana Rahme, Raphael Hitti, Kenza Sophie Lahlou"
+    tags: ["Cortical Malformations", "Brain Networks", "Neuroimaging"]
+  
+  - title: "IESS Recurrence — Infantile Epileptic Spasms Syndrome"
+    category: "clinical"
+    section: "Clinical Studies"
+    status: "Active"
+    description: "Clinical study on recurrence patterns in infantile epileptic spasms syndrome (IESS), identifying risk factors for relapse after initial treatment response and their impact on neurodevelopmental outcomes."
+    supervisor: "Dr. Hadjinicolaou, Dr. Weil"
+    students: "Catherine Korman, Ilias Elmansouri"
+    tags: ["IESS", "Infantile Spasms", "Recurrence"]
+  
+  - title: "Vigabatrin in IESS — Treatment Outcomes"
+    category: "clinical"
+    section: "Clinical Studies"
+    status: "Active"
+    description: "Clinical and therapeutic study on the role of vigabatrin in infantile epileptic spasms syndrome, evaluating efficacy, response predictors, and side effect profile in the CHUSJ cohort."
+    supervisor: "Dr. Hadjinicolaou"
+    students: "Ilias Elmansouri"
+    tags: ["Vigabatrin", "IESS", "Pharmacotherapy"]
+  
+  - title: "Épilepsie Réfractaire — Pediatric Drug-Resistant Epilepsy Characterization"
+    category: "clinical"
+    section: "Clinical Studies"
+    status: "Active"
+    description: "Clinical observational study characterizing drug-resistant epilepsy in children using clinical, EEG, and neuroimaging data to identify patterns and predictors of pharmacoresistance."
+    supervisor: "Dr. Hadjinicolaou, Dr. Weil"
+    students: "Laurie St-Arnaud, Cédérick Montplaisir"
+    tags: ["DRE", "Observational", "Pediatric"]
+  
+  - title: "Semiology — FCD Seizure Semiology Description"
+    category: "clinical"
+    section: "Clinical Studies"
+    status: "Active"
+    description: "Clinical descriptive study characterizing the ictal semiology of patients with focal cortical dysplasia (FCD), comparing semiology patterns across FCD subtypes and cortical locations to improve pre-surgical diagnosis."
+    supervisor: "Dr. Hadjinicolaou (in collaboration with Harvard)"
+    students: "Felixe Pelletier, Raphael Hitti, Kenza Sophie Lahlou"
+    tags: ["FCD", "Semiology", "Cortical Dysplasia"]
+  
+  - title: "Impact — Intraoperative Strokes in Focal Epileptic Lesionectomies"
+    category: "clinical"
+    section: "Clinical Studies"
+    status: "Active"
+    description: "Study examining the incidence, risk factors, and functional impact of intraoperative strokes occurring during focal epilepsy lesionectomies, with implications for surgical planning and informed consent."
+    supervisor: "Dr. Weil"
+    students: "Xavier Carmona, Cédérick Montplaisir, Kenza Sophie Lahlou, Sudarsan Packirisamy"
+    tags: ["Surgical Complications", "Lesionectomy", "Stroke"]
+  
+  - title: "SHM — Hippocampal Stimulation & Memory Cortex Mapping"
+    category: "case"
+    section: "Case Reports & Case Series"
+    status: "Active"
+    description: "Case study on the ability of direct hippocampal stimulation (TMS) to localize eloquent cortex involved in specific memory functions, with implications for pre-surgical functional mapping in temporal lobe epilepsy."
+    supervisor: "Dr. Weil, Dr. Hadjinicolaou"
+    students: "Xavier Carmona, Andrée-Anne Simard-Meilleur, Louise Gagnon"
+    tags: ["TMS", "Memory", "Brain Mapping", "Case Study"]
+  
+  - title: "Burr Hole Disconnection — Novel Surgical Approach"
+    category: "case"
+    section: "Case Reports & Case Series"
+    status: "Active"
+    description: "Case report documenting a minimally invasive disconnection procedure performed through a single burr hole, describing technique, electrophysiological monitoring, and outcomes."
+    supervisor: "Dr. Weil"
+    students: "Flavie Grenier Chartrand, Kenza Sophie Lahlou, Cédérick Montplaisir"
+    tags: ["Disconnection", "Minimally Invasive", "Case Report"]
+  
+  - title: "HH Case Report — Endoscopic Disconnection in Limited-Resource Settings"
+    category: "case"
+    section: "Case Reports & Case Series"
+    status: "Active"
+    description: "Case report on a Chilean patient who underwent endoscopic hypothalamic hamartoma disconnection in a resource-limited context, highlighting adaptability of surgical technique and outcomes."
+    supervisor: "Dr. Weil"
+    students: "William Davalan, Cédérick Montplaisir"
+    tags: ["Hypothalamic Hamartoma", "Endoscopy", "Case Report"]
+  
+  - title: "Hyperprolinémie — Case Series with Genetics & Literature Review"
+    category: "case"
+    section: "Case Reports & Case Series"
+    status: "Active"
+    description: "Case report and series on hyperprolinemia presenting with epilepsy, integrating clinical data, genetic findings, and a comprehensive literature review of this rare metabolic epilepsy."
+    supervisor: "Dr. Hadjinicolaou"
+    students: "Alexie Fonta Holder, Cédérick Montplaisir"
+    tags: ["Metabolic Epilepsy", "Genetics", "Case Series"]
+  
+  - title: "Banque EEG — REDCap Clinical Research Database"
+    category: "clinical"
+    section: "Research Infrastructure"
+    status: "Active"
+    description: "Building and curating a centralized REDCap database integrating clinical, electrophysiological, and neuroimaging data for all patients undergoing epilepsy evaluation at CHUSJ, to serve as a shared resource for future research projects."
+    supervisor: "Dr. Weil, Dr. Hadjinicolaou"
+    students: "Jana Rahme"
+    tags: ["REDCap", "Database", "Infrastructure"]

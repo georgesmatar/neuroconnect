@@ -19,283 +19,31 @@
     <button class="proj-filter-btn" data-filter="case">Case Reports</button>
   </div>
 
-  <!-- SEEG / iEEG ANALYTICS -->
-  <div class="proj-section-label">SEEG &amp; iEEG Analytics</div>
-  <div class="projects-grid">
-
-    <div class="project-card" data-cat="seeg">
-      <div class="project-status status-active">● Active</div>
-      <h3 class="project-title">Virtual Epileptic Patient Cohort — SEEG Connectivity</h3>
-      <p class="project-desc">Analysis of seizure onset zones (SOZ), propagation zones (PZ), non-involved zones (NIZ), and non-sampled regions on stereo-EEG data. Intra- and inter-zone functional connectivity compared to age- and sex-matched healthy controls.</p>
-      <div class="project-meta">
-        <div class="project-meta-item"><span class="project-meta-label">Supervisor:</span> Dr. Georges Matar, Dr. Weil</div>
-        <div class="project-meta-item"><span class="project-meta-label">Students:</span> Georges Matar, Xavier Carmona</div>
+  {{ $sections := slice "SEEG & iEEG Analytics" "AI & Clinical Prediction" "Systematic Reviews & Meta-analyses" "Clinical Studies" "Case Reports & Case Series" "Research Infrastructure" }}
+  {{ range $sections }}
+    {{ $section := . }}
+    {{ $sectionProjects := where site.Data.projects.items "section" $section }}
+    {{ if $sectionProjects }}
+      <div class="proj-section-label">{{ $section }}</div>
+      <div class="projects-grid">
+        {{ range $sectionProjects }}
+          <div class="project-card" data-cat="{{ .category }}">
+            <div class="project-status status-active">● {{ .status }}</div>
+            <h3 class="project-title">{{ .title }}</h3>
+            <p class="project-desc">{{ .description }}</p>
+            <div class="project-meta">
+              {{ with .supervisor }}<div class="project-meta-item"><span class="project-meta-label">Supervisor:</span> {{ . }}</div>{{ end }}
+              {{ with .funding }}<div class="project-meta-item"><span class="project-meta-label">Funding:</span> {{ . }}</div>{{ end }}
+              {{ with .students }}<div class="project-meta-item"><span class="project-meta-label">Students:</span> {{ . }}</div>{{ end }}
+            </div>
+            <div class="project-tags">
+              {{ range .tags }}<span class="project-tag">{{ . }}</span>{{ end }}
+            </div>
+          </div>
+        {{ end }}
       </div>
-      <div class="project-tags"><span class="project-tag">SEEG</span><span class="project-tag">Connectivity</span><span class="project-tag">EEG Analysis</span></div>
-    </div>
-
-    <div class="project-card" data-cat="seeg">
-      <div class="project-status status-active">● Active</div>
-      <h3 class="project-title">Callosotomy EEG — Interhemispheric Connectivity</h3>
-      <p class="project-desc">Analysis of interhemispheric connectivity using different EEG biomarkers on pre-callosotomy data to better characterize the epileptic network and predict callosotomy response.</p>
-      <div class="project-meta">
-        <div class="project-meta-item"><span class="project-meta-label">Supervisor:</span> Dr. Georges Matar, Dr. Weil</div>
-        <div class="project-meta-item"><span class="project-meta-label">Students:</span> Georges Matar, Jeanne Frédette</div>
-      </div>
-      <div class="project-tags"><span class="project-tag">Callosotomy</span><span class="project-tag">EEG</span><span class="project-tag">Connectivity</span></div>
-    </div>
-
-    <div class="project-card" data-cat="seeg">
-      <div class="project-status status-active">● Active</div>
-      <h3 class="project-title">Sinks &amp; Sources — iEEG Propagation Biomarkers</h3>
-      <p class="project-desc">Multi-channel iEEG analysis characterizing sinks and sources as biomarkers of seizure propagation and suppression, aimed at improving identification of the epileptogenic zone.</p>
-      <div class="project-meta">
-        <div class="project-meta-item"><span class="project-meta-label">Supervisor:</span> Dr. Georges Matar</div>
-        <div class="project-meta-item"><span class="project-meta-label">Students:</span> Malik Amir</div>
-      </div>
-      <div class="project-tags"><span class="project-tag">iEEG</span><span class="project-tag">Biomarkers</span><span class="project-tag">Propagation</span></div>
-    </div>
-
-    <div class="project-card" data-cat="seeg">
-      <div class="project-status status-active">● Active</div>
-      <h3 class="project-title">Spread — MEM Source Localization on sEEG</h3>
-      <p class="project-desc">Validation of Maximum Entropy on the Mean (MEM) source localization on sEEG data, using patient-specific structural connectivity and graph theory to distinguish surgically relevant from non-relevant regions of seizure spread (srROSS vs nsrROSS).</p>
-      <div class="project-meta">
-        <div class="project-meta-item"><span class="project-meta-label">Supervisor:</span> Dr. Weil, Dr. Hadjinicolaou</div>
-        <div class="project-meta-item"><span class="project-meta-label">Students:</span> Xavier Carmona, Duaa Ali Cheema, Cédérick Montplaisir</div>
-      </div>
-      <div class="project-tags"><span class="project-tag">sEEG</span><span class="project-tag">MEM</span><span class="project-tag">Graph Theory</span><span class="project-tag">Presurgical Evaluation</span></div>
-    </div>
-
-  </div>
-
-  <!-- AI / PREDICTION -->
-  <div class="proj-section-label">AI &amp; Clinical Prediction</div>
-  <div class="projects-grid">
-
-    <div class="project-card" data-cat="ai">
-      <div class="project-status status-active">● Active</div>
-      <h3 class="project-title">CIHR-DRE Prediction — Early Drug-Resistant Epilepsy Detection</h3>
-      <p class="project-desc">Machine learning-based prediction of drug-resistant epilepsy at earliest stages — before anti-seizure medication prescription. Uses clinical, EEG, and imaging features to build risk-stratification tools for prospective use.</p>
-      <div class="project-meta">
-        <div class="project-meta-item"><span class="project-meta-label">Funding:</span> CIHR</div>
-        <div class="project-meta-item"><span class="project-meta-label">Students:</span> Mustafa Haddad, Raphael Hitti, Georges Matar</div>
-      </div>
-      <div class="project-tags"><span class="project-tag">Machine Learning</span><span class="project-tag">DRE</span><span class="project-tag">Prediction</span><span class="project-tag">CIHR</span></div>
-    </div>
-
-    <div class="project-card" data-cat="ai">
-      <div class="project-status status-active">● Active</div>
-      <h3 class="project-title">Patient Trajectory Analysis — AI Survival Modeling</h3>
-      <p class="project-desc">Survival analysis and machine learning modeling of long-term patient trajectories in drug-resistant epilepsy, integrating clinical, surgical, and outcome data to identify predictors of seizure freedom and functional outcomes.</p>
-      <div class="project-meta">
-        <div class="project-meta-item"><span class="project-meta-label">Supervisor:</span> Dr. Georges Matar</div>
-        <div class="project-meta-item"><span class="project-meta-label">Students:</span> Ali El Jamal</div>
-      </div>
-      <div class="project-tags"><span class="project-tag">Survival Analysis</span><span class="project-tag">AI</span><span class="project-tag">Outcomes</span></div>
-    </div>
-
-  </div>
-
-  <!-- SYSTEMATIC REVIEWS & META-ANALYSES -->
-  <div class="proj-section-label">Systematic Reviews &amp; Meta-analyses</div>
-  <div class="projects-grid">
-
-    <div class="project-card" data-cat="review">
-      <div class="project-status status-active">● Active</div>
-      <h3 class="project-title">ASM Cognition — Cognitive Effects of Anti-Seizure Medications</h3>
-      <p class="project-desc">Systematic review and meta-analysis on the cognitive effects of anti-epileptic medications in children and adults, including attention, memory, language, and academic performance outcomes across drug classes.</p>
-      <div class="project-meta">
-        <div class="project-meta-item"><span class="project-meta-label">Supervisor:</span> Dr. Hadjinicolaou, Dr. Weil</div>
-        <div class="project-meta-item"><span class="project-meta-label">Students:</span> Andrée-Anne Simard-Meilleur, Mustafa Haddad, Duaa Ali Cheema, Raphael Hitti, Meriem Hassaine, Sudarsan Packirisamy</div>
-      </div>
-      <div class="project-tags"><span class="project-tag">Cognition</span><span class="project-tag">ASM</span><span class="project-tag">Systematic Review</span><span class="project-tag">Meta-analysis</span></div>
-    </div>
-
-    <div class="project-card" data-cat="review">
-      <div class="project-status status-active">● Active</div>
-      <h3 class="project-title">Insular Epilepsy Surgery — Systematic Review &amp; Meta-analysis</h3>
-      <p class="project-desc">Comparison of outcomes following different surgical techniques for insular epilepsy (resection, disconnection, SEEG-guided ablation), synthesizing the global literature on seizure freedom and complication rates.</p>
-      <div class="project-meta">
-        <div class="project-meta-item"><span class="project-meta-label">Supervisor:</span> Dr. Weil</div>
-        <div class="project-meta-item"><span class="project-meta-label">Students:</span> Cédérick Montplaisir</div>
-      </div>
-      <div class="project-tags"><span class="project-tag">Insular Epilepsy</span><span class="project-tag">Systematic Review</span><span class="project-tag">Surgical Outcomes</span></div>
-    </div>
-
-    <div class="project-card" data-cat="review">
-      <div class="project-status status-active">● Active</div>
-      <h3 class="project-title">PMG / Grade Newcastle — Polymicrogyria Surgical Outcomes</h3>
-      <p class="project-desc">Systematic review evaluating surgical outcomes in drug-resistant epilepsy associated with polymicrogyria (PMG), assessing the impact of lesion extent, location, and surgical approach on seizure freedom.</p>
-      <div class="project-meta">
-        <div class="project-meta-item"><span class="project-meta-label">Supervisor:</span> Dr. Weil, Dr. Hadjinicolaou</div>
-        <div class="project-meta-item"><span class="project-meta-label">Students:</span> Raphael Hitti, Kenza Sophie Lahlou</div>
-      </div>
-      <div class="project-tags"><span class="project-tag">Polymicrogyria</span><span class="project-tag">Systematic Review</span><span class="project-tag">Cortical Malformation</span></div>
-    </div>
-
-    <div class="project-card" data-cat="review">
-      <div class="project-status status-active">● Active</div>
-      <h3 class="project-title">IPD-DEE-SWAS — Individual Patient Data Meta-analysis</h3>
-      <p class="project-desc">Individual patient data (IPD) meta-analysis on DEE-SWAS (developmental and epileptic encephalopathy with spike-and-wave activation during sleep), comparing treatment efficacy and identifying predictors of neurocognitive outcome.</p>
-      <div class="project-meta">
-        <div class="project-meta-item"><span class="project-meta-label">Supervisor:</span> Dr. Weil, Dr. Hadjinicolaou</div>
-        <div class="project-meta-item"><span class="project-meta-label">Students:</span> Xavier Carmona, Julia Szwarcberg</div>
-      </div>
-      <div class="project-tags"><span class="project-tag">DEE-SWAS</span><span class="project-tag">IPD Meta-analysis</span><span class="project-tag">SPSS</span></div>
-    </div>
-
-    <div class="project-card" data-cat="review">
-      <div class="project-status status-active">● Active</div>
-      <h3 class="project-title">NSM — Neurogenic Stunned Myocardium in Pediatric Epilepsy</h3>
-      <p class="project-desc">Meta-analysis identifying determinants and predictors of neurogenic stunned myocardium in the pediatric epilepsy population, with implications for peri-ictal cardiac monitoring.</p>
-      <div class="project-meta">
-        <div class="project-meta-item"><span class="project-meta-label">Supervisor:</span> Dr. Weil</div>
-        <div class="project-meta-item"><span class="project-meta-label">Students:</span> Cédérick Montplaisir</div>
-      </div>
-      <div class="project-tags"><span class="project-tag">Cardiac</span><span class="project-tag">SUDEP</span><span class="project-tag">Meta-analysis</span><span class="project-tag">Pediatric</span></div>
-    </div>
-
-  </div>
-
-  <!-- CLINICAL STUDIES -->
-  <div class="proj-section-label">Clinical Studies</div>
-  <div class="projects-grid">
-
-    <div class="project-card" data-cat="clinical">
-      <div class="project-status status-active">● Active</div>
-      <h3 class="project-title">NEST — Cortical Malformations: Network Mapping &amp; Outcomes</h3>
-      <p class="project-desc">Retrospective study of clinical evolution and treatment response in patients with cortical malformations, combined with brain network mapping from neuroimaging data to identify connectivity biomarkers of surgical outcome.</p>
-      <div class="project-meta">
-        <div class="project-meta-item"><span class="project-meta-label">Supervisor:</span> Dr. Weil, Dr. Hadjinicolaou</div>
-        <div class="project-meta-item"><span class="project-meta-label">Students:</span> Jonah Greis, David Sigal, David Levett, Jana Rahme, Raphael Hitti, Kenza Sophie Lahlou</div>
-      </div>
-      <div class="project-tags"><span class="project-tag">Cortical Malformations</span><span class="project-tag">Brain Networks</span><span class="project-tag">Neuroimaging</span></div>
-    </div>
-
-    <div class="project-card" data-cat="clinical">
-      <div class="project-status status-active">● Active</div>
-      <h3 class="project-title">IESS Recurrence — Infantile Epileptic Spasms Syndrome</h3>
-      <p class="project-desc">Clinical study on recurrence patterns in infantile epileptic spasms syndrome (IESS), identifying risk factors for relapse after initial treatment response and their impact on neurodevelopmental outcomes.</p>
-      <div class="project-meta">
-        <div class="project-meta-item"><span class="project-meta-label">Supervisor:</span> Dr. Hadjinicolaou, Dr. Weil</div>
-        <div class="project-meta-item"><span class="project-meta-label">Students:</span> Catherine Korman, Ilias Elmansouri</div>
-      </div>
-      <div class="project-tags"><span class="project-tag">IESS</span><span class="project-tag">Infantile Spasms</span><span class="project-tag">Recurrence</span></div>
-    </div>
-
-    <div class="project-card" data-cat="clinical">
-      <div class="project-status status-active">● Active</div>
-      <h3 class="project-title">Vigabatrin in IESS — Treatment Outcomes</h3>
-      <p class="project-desc">Clinical and therapeutic study on the role of vigabatrin in infantile epileptic spasms syndrome, evaluating efficacy, response predictors, and side effect profile in the CHUSJ cohort.</p>
-      <div class="project-meta">
-        <div class="project-meta-item"><span class="project-meta-label">Supervisor:</span> Dr. Hadjinicolaou</div>
-        <div class="project-meta-item"><span class="project-meta-label">Students:</span> Ilias Elmansouri</div>
-      </div>
-      <div class="project-tags"><span class="project-tag">Vigabatrin</span><span class="project-tag">IESS</span><span class="project-tag">Pharmacotherapy</span></div>
-    </div>
-
-    <div class="project-card" data-cat="clinical">
-      <div class="project-status status-active">● Active</div>
-      <h3 class="project-title">Épilepsie Réfractaire — Pediatric Drug-Resistant Epilepsy Characterization</h3>
-      <p class="project-desc">Clinical observational study characterizing drug-resistant epilepsy in children using clinical, EEG, and neuroimaging data to identify patterns and predictors of pharmacoresistance.</p>
-      <div class="project-meta">
-        <div class="project-meta-item"><span class="project-meta-label">Supervisor:</span> Dr. Hadjinicolaou, Dr. Weil</div>
-        <div class="project-meta-item"><span class="project-meta-label">Students:</span> Laurie St-Arnaud, Cédérick Montplaisir</div>
-      </div>
-      <div class="project-tags"><span class="project-tag">DRE</span><span class="project-tag">Observational</span><span class="project-tag">Pediatric</span></div>
-    </div>
-
-    <div class="project-card" data-cat="clinical">
-      <div class="project-status status-active">● Active</div>
-      <h3 class="project-title">Semiology — FCD Seizure Semiology Description</h3>
-      <p class="project-desc">Clinical descriptive study characterizing the ictal semiology of patients with focal cortical dysplasia (FCD), comparing semiology patterns across FCD subtypes and cortical locations to improve pre-surgical diagnosis.</p>
-      <div class="project-meta">
-        <div class="project-meta-item"><span class="project-meta-label">Supervisor:</span> Dr. Hadjinicolaou (in collaboration with Harvard)</div>
-        <div class="project-meta-item"><span class="project-meta-label">Students:</span> Felixe Pelletier, Raphael Hitti, Kenza Sophie Lahlou</div>
-      </div>
-      <div class="project-tags"><span class="project-tag">FCD</span><span class="project-tag">Semiology</span><span class="project-tag">Cortical Dysplasia</span></div>
-    </div>
-
-    <div class="project-card" data-cat="clinical">
-      <div class="project-status status-active">● Active</div>
-      <h3 class="project-title">Impact — Intraoperative Strokes in Focal Epileptic Lesionectomies</h3>
-      <p class="project-desc">Study examining the incidence, risk factors, and functional impact of intraoperative strokes occurring during focal epilepsy lesionectomies, with implications for surgical planning and informed consent.</p>
-      <div class="project-meta">
-        <div class="project-meta-item"><span class="project-meta-label">Supervisor:</span> Dr. Weil</div>
-        <div class="project-meta-item"><span class="project-meta-label">Students:</span> Xavier Carmona, Cédérick Montplaisir, Kenza Sophie Lahlou, Sudarsan Packirisamy</div>
-      </div>
-      <div class="project-tags"><span class="project-tag">Surgical Complications</span><span class="project-tag">Lesionectomy</span><span class="project-tag">Stroke</span></div>
-    </div>
-
-  </div>
-
-  <!-- CASE REPORTS -->
-  <div class="proj-section-label">Case Reports &amp; Case Series</div>
-  <div class="projects-grid">
-
-    <div class="project-card" data-cat="case">
-      <div class="project-status status-active">● Active</div>
-      <h3 class="project-title">SHM — Hippocampal Stimulation &amp; Memory Cortex Mapping</h3>
-      <p class="project-desc">Case study on the ability of direct hippocampal stimulation (TMS) to localize eloquent cortex involved in specific memory functions, with implications for pre-surgical functional mapping in temporal lobe epilepsy.</p>
-      <div class="project-meta">
-        <div class="project-meta-item"><span class="project-meta-label">Supervisor:</span> Dr. Weil, Dr. Hadjinicolaou</div>
-        <div class="project-meta-item"><span class="project-meta-label">Students:</span> Xavier Carmona, Andrée-Anne Simard-Meilleur, Louise Gagnon</div>
-      </div>
-      <div class="project-tags"><span class="project-tag">TMS</span><span class="project-tag">Memory</span><span class="project-tag">Brain Mapping</span><span class="project-tag">Case Study</span></div>
-    </div>
-
-    <div class="project-card" data-cat="case">
-      <div class="project-status status-active">● Active</div>
-      <h3 class="project-title">Burr Hole Disconnection — Novel Surgical Approach</h3>
-      <p class="project-desc">Case report documenting a minimally invasive disconnection procedure performed through a single burr hole, describing technique, electrophysiological monitoring, and outcomes.</p>
-      <div class="project-meta">
-        <div class="project-meta-item"><span class="project-meta-label">Supervisor:</span> Dr. Weil</div>
-        <div class="project-meta-item"><span class="project-meta-label">Students:</span> Flavie Grenier Chartrand, Kenza Sophie Lahlou, Cédérick Montplaisir</div>
-      </div>
-      <div class="project-tags"><span class="project-tag">Disconnection</span><span class="project-tag">Minimally Invasive</span><span class="project-tag">Case Report</span></div>
-    </div>
-
-    <div class="project-card" data-cat="case">
-      <div class="project-status status-active">● Active</div>
-      <h3 class="project-title">HH Case Report — Endoscopic Disconnection in Limited-Resource Settings</h3>
-      <p class="project-desc">Case report on a Chilean patient who underwent endoscopic hypothalamic hamartoma disconnection in a resource-limited context, highlighting adaptability of surgical technique and outcomes.</p>
-      <div class="project-meta">
-        <div class="project-meta-item"><span class="project-meta-label">Supervisor:</span> Dr. Weil</div>
-        <div class="project-meta-item"><span class="project-meta-label">Students:</span> William Davalan, Cédérick Montplaisir</div>
-      </div>
-      <div class="project-tags"><span class="project-tag">Hypothalamic Hamartoma</span><span class="project-tag">Endoscopy</span><span class="project-tag">Case Report</span></div>
-    </div>
-
-    <div class="project-card" data-cat="case">
-      <div class="project-status status-active">● Active</div>
-      <h3 class="project-title">Hyperprolinémie — Case Series with Genetics &amp; Literature Review</h3>
-      <p class="project-desc">Case report and series on hyperprolinemia presenting with epilepsy, integrating clinical data, genetic findings, and a comprehensive literature review of this rare metabolic epilepsy.</p>
-      <div class="project-meta">
-        <div class="project-meta-item"><span class="project-meta-label">Supervisor:</span> Dr. Hadjinicolaou</div>
-        <div class="project-meta-item"><span class="project-meta-label">Students:</span> Alexie Fonta Holder, Cédérick Montplaisir</div>
-      </div>
-      <div class="project-tags"><span class="project-tag">Metabolic Epilepsy</span><span class="project-tag">Genetics</span><span class="project-tag">Case Series</span></div>
-    </div>
-
-  </div>
-
-  <!-- INFRASTRUCTURE -->
-  <div class="proj-section-label">Research Infrastructure</div>
-  <div class="projects-grid">
-
-    <div class="project-card" data-cat="clinical">
-      <div class="project-status status-active">● Active</div>
-      <h3 class="project-title">Banque EEG — REDCap Clinical Research Database</h3>
-      <p class="project-desc">Building and curating a centralized REDCap database integrating clinical, electrophysiological, and neuroimaging data for all patients undergoing epilepsy evaluation at CHUSJ, to serve as a shared resource for future research projects.</p>
-      <div class="project-meta">
-        <div class="project-meta-item"><span class="project-meta-label">Supervisor:</span> Dr. Weil, Dr. Hadjinicolaou</div>
-        <div class="project-meta-item"><span class="project-meta-label">Students:</span> Jana Rahme</div>
-      </div>
-      <div class="project-tags"><span class="project-tag">REDCap</span><span class="project-tag">Database</span><span class="project-tag">Infrastructure</span></div>
-    </div>
-
-  </div>
+    {{ end }}
+  {{ end }}
 
   <!-- CTA -->
   <div style="margin-top: 64px; padding: 48px; background: var(--bg-card); border: 1px solid var(--border-strong); border-radius: 20px; text-align: center;">
