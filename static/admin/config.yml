@@ -1,9 +1,6 @@
 backend:
-  name: github
-  repo: georgesmatar/neuroconnect
+  name: git-gateway
   branch: main
-  base_url: https://api.netlify.com
-  site_id: moonlit-naiad-000e74.netlify.app
 
 media_folder: static/images/uploads
 public_folder: /images/uploads
