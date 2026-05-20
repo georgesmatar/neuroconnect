@@ -31,17 +31,27 @@ if (toggle && menu) {
   });
 }
 
-// ── AOS (simple scroll reveal) ──
+// ── AOS (scroll reveal) — supports data-aos-delay ──
 const aosObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry, i) => {
     if (entry.isIntersecting) {
-      setTimeout(() => entry.target.classList.add('aos-visible'), i * 80);
+      const attrDelay = parseInt(entry.target.dataset.aosDelay || 0, 10);
+      const stagger = i * 80;
+      setTimeout(() => entry.target.classList.add('aos-visible'), attrDelay + stagger);
       aosObserver.unobserve(entry.target);
     }
   });
-}, { threshold: 0.1 });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
 document.querySelectorAll('[data-aos]').forEach(el => aosObserver.observe(el));
+
+// ── Hero entry animation ──
+(function () {
+  document.querySelectorAll('.hero-stat-item').forEach((el, i) => {
+    el.style.animationDelay = (0.8 + i * 0.12) + 's';
+    el.classList.add('hero-stat-animate');
+  });
+})();
 
 // ── Neural network canvas ──
 (function () {

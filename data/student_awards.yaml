@@ -1,0 +1,36 @@
+items:
+  - year: 2025
+    student: "Tristan Brunette-Clément"
+    level: "MSc / MD candidate"
+    award: "Prix Daniel-Tassé"
+    organization: "Journée scientifique, Département de Chirurgie, Université de Montréal"
+
+  - year: 2025
+    student: "Farbod Niazi"
+    level: "MSc / MD candidate"
+    award: "Graduate Student Award — Best Student Publication in Epilepsy Research"
+    organization: "Canadian League Against Epilepsy (CLAE)"
+
+  - year: 2022
+    student: "Daniele Wolf"
+    level: "PhD candidate"
+    award: "Graduate Student Award"
+    organization: "Canadian League Against Epilepsy (CLAE)"
+
+  - year: 2022
+    student: "Evan Dimentberg"
+    level: "Research trainee"
+    award: "Clinical Research Abstract Prize ($500 CAD)"
+    organization: "Canadian League Against Epilepsy (CLAE)"
+
+  - year: 2019
+    student: "Harrison J. Westwick"
+    level: "MD / MSc"
+    award: "Prix Daniel-Tassé"
+    organization: "Journée scientifique, Département de Chirurgie, Université de Montréal"
+
+  - year: 2018
+    student: "Sandrine Bourgeois-Tardif"
+    level: "MSc candidate"
+    award: "Poster Presentation Prize"
+    organization: "33rd Congrès de la recherche du CHUSJ"

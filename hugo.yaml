@@ -28,14 +28,14 @@ params:
       description: "High-resolution mapping of eloquent cortex and seizure networks using intracranial EEG, fMRI, and advanced computational models."
 
   stats:
-    - number: "200+"
-      label: "Patients Treated"
-    - number: "50+"
+    - number: "214+"
       label: "Publications"
-    - number: "15+"
-      label: "Team Members"
-    - number: "10+"
-      label: "Years of Research"
+    - number: "77+"
+      label: "Trainees Supervised"
+    - number: "$6.5M+"
+      label: "Research Funding"
+    - number: "3"
+      label: "International Consortia"
 
 menu:
   main:
@@ -57,12 +57,21 @@ menu:
     - name: "Awards & Talks"
       url: "/achievements/"
       weight: 6
+    - name: "Outreach"
+      url: "/outreach/"
+      weight: 7
+    - name: "Collaborators"
+      url: "/collaborators/"
+      weight: 8
+    - name: "Funding"
+      url: "/funding/"
+      weight: 9
     - name: "News"
       url: "/news/"
-      weight: 7
+      weight: 10
     - name: "Contact"
       url: "/contact/"
-      weight: 8
+      weight: 11
 
 markup:
   goldmark:

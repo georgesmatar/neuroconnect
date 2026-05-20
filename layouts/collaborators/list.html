@@ -1,0 +1,199 @@
+{{ define "main" }}
+
+<div class="page-hero">
+  <div class="container">
+    <span class="section-tag">Our Network</span>
+    <h1 class="page-title" style="margin-top:12px;">Collaborators</h1>
+    <p class="page-subtitle">{{ .Params.subtitle }}</p>
+  </div>
+</div>
+
+<div class="section-content container">
+
+  <!-- INTERNATIONAL CONSORTIA -->
+  <section class="collab-section">
+    <div class="ach-section-header">
+      <div class="ach-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" stroke-width="1.5"><circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><line x1="12" y1="7" x2="5" y2="17"/><line x1="12" y1="7" x2="19" y2="17"/><line x1="7" y1="19" x2="17" y2="19"/></svg>
+      </div>
+      <h2>International Research Consortia</h2>
+    </div>
+    <p class="outreach-intro">Our lab is a founding and active member of three multinational research networks, each studying different aspects of epilepsy surgery and neuromodulation outcomes.</p>
+
+    <div class="consortia-grid">
+      <div class="consortium-card consortium-primary">
+        <div class="consortium-badge">Active</div>
+        <div class="consortium-name">CONNECTiVOS</div>
+        <div class="consortium-full">Canadian and North American Outcomes Network for Children With Treatment-Resistant Epilepsy Via Vagus nerve stimulation Or other Stimulation therapies</div>
+        <p class="consortium-desc">A prospective, multinational study of vagus nerve stimulation (VNS) and deep brain stimulation outcomes in children with drug-resistant epilepsy. Dr. Weil and Dr. Hadjinicolaou are co-investigators. Key publications in <em>Nature Communications</em> (2026) and <em>Epilepsia</em> (2025).</p>
+        <div class="consortium-stats">
+          <span class="c-stat">15+ sites</span>
+          <span class="c-stat">North America</span>
+          <span class="c-stat">VNS · DBS · RNS</span>
+        </div>
+      </div>
+
+      <div class="consortium-card">
+        <div class="consortium-badge">Active</div>
+        <div class="consortium-name">MELD Project</div>
+        <div class="consortium-full">Multi-centre Epilepsy Lesion Detection</div>
+        <p class="consortium-desc">An international collaboration developing automated MRI analysis tools to detect focal cortical dysplasia and other lesions in epilepsy patients. The team contributed to the automated segmentation of post-surgical resection cavities study published in 2025.</p>
+        <div class="consortium-stats">
+          <span class="c-stat">30+ sites</span>
+          <span class="c-stat">Europe · Americas · Asia</span>
+          <span class="c-stat">MRI · AI</span>
+        </div>
+      </div>
+
+      <div class="consortium-card">
+        <div class="consortium-badge">Active</div>
+        <div class="consortium-name">CHILD-DBS Registry</div>
+        <div class="consortium-full">Canadian and International Registry for Deep Brain Stimulation in Children</div>
+        <p class="consortium-desc">A multicenter registry tracking outcomes of deep brain stimulation in pediatric populations across indications including epilepsy, movement disorders, and disorders of consciousness. Multiple publications in <em>Epilepsia</em> and <em>Neurology</em> (2025).</p>
+        <div class="consortium-stats">
+          <span class="c-stat">8+ sites</span>
+          <span class="c-stat">Canada · USA</span>
+          <span class="c-stat">DBS · neuromodulation</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEY COLLABORATORS -->
+  <section class="collab-section" style="margin-top: 64px;">
+    <div class="ach-section-header">
+      <div class="ach-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </div>
+      <h2>Key Collaborators</h2>
+    </div>
+
+    <div class="collaborators-list">
+      <div class="collaborator-item">
+        <div class="collaborator-name">Dr. George M. Ibrahim</div>
+        <div class="collaborator-role">Pediatric Neurosurgeon &amp; Neuroscientist</div>
+        <div class="collaborator-institution">Hospital for Sick Children (SickKids) · University of Toronto</div>
+        <div class="collaborator-projects">CONNECTiVOS · CHILD-DBS · VNS outcome prediction (Nature Communications 2026)</div>
+      </div>
+
+      <div class="collaborator-item">
+        <div class="collaborator-name">Dr. Aria Fallah</div>
+        <div class="collaborator-role">Pediatric Neurosurgeon</div>
+        <div class="collaborator-institution">UCLA Mattel Children's Hospital · previously Miami Children's Hospital</div>
+        <div class="collaborator-projects">Hypothalamic hamartoma surgery · Hemispherectomy outcomes · CONNECTiVOS</div>
+      </div>
+
+      <div class="collaborator-item">
+        <div class="collaborator-name">Dr. Boris Bernhardt</div>
+        <div class="collaborator-role">Neuroscientist — Multimodal Neuroimaging</div>
+        <div class="collaborator-institution">McGill University · McConnell Brain Imaging Centre</div>
+        <div class="collaborator-projects">MELD · Connectome-based epilepsy biomarkers · thesis committee membership</div>
+      </div>
+
+      <div class="collaborator-item">
+        <div class="collaborator-name">Dr. Marco Bonizzato</div>
+        <div class="collaborator-role">Engineer — Neural Interfaces &amp; Neuroprosthetics</div>
+        <div class="collaborator-institution">Polytechnique Montréal · Université de Montréal</div>
+        <div class="collaborator-projects">Motor cortex neuromodulation after spinal cord injury · co-supervising Davide Burchielli (PhD)</div>
+      </div>
+
+      <div class="collaborator-item">
+        <div class="collaborator-name">Dr. Frédéric Leblond</div>
+        <div class="collaborator-role">Biomedical Engineer — Intraoperative Spectroscopy</div>
+        <div class="collaborator-institution">Polytechnique Montréal</div>
+        <div class="collaborator-projects">Raman spectroscopy for surgical guidance in cortical dysplasia and brain tumors</div>
+      </div>
+
+      <div class="collaborator-item">
+        <div class="collaborator-name">Dr. Graziella Di Cristo</div>
+        <div class="collaborator-role">Neuroscientist — Developmental Neuroscience</div>
+        <div class="collaborator-institution">Université de Montréal · CRCHUSJ</div>
+        <div class="collaborator-projects">Co-supervising Daniele Wolf (PhD) — sex-specific hippocampal development in epileptogenesis</div>
+      </div>
+
+      <div class="collaborator-item">
+        <div class="collaborator-name">Dr. Bénédicte Amilhon</div>
+        <div class="collaborator-role">Neuroscientist — Hippocampal Circuits</div>
+        <div class="collaborator-institution">Université de Montréal</div>
+        <div class="collaborator-projects">Co-supervising Tarek Shaker (PhD) — neuro-inflammation in focal cortical dysplasia</div>
+      </div>
+
+      <div class="collaborator-item">
+        <div class="collaborator-name">Dr. Louis de Beaumont</div>
+        <div class="collaborator-role">Neuroscientist — Traumatic Brain Injury</div>
+        <div class="collaborator-institution">CHU Sainte-Justine Research Centre</div>
+        <div class="collaborator-projects">Neuroinflammation and neuroprotection after TBI · refractory epilepsy and cannabinoids</div>
+      </div>
+
+      <div class="collaborator-item">
+        <div class="collaborator-name">Dr. Elsa Rossignol</div>
+        <div class="collaborator-role">Neuroscientist — Ion Channels &amp; Epilepsy</div>
+        <div class="collaborator-institution">Université de Montréal · CRCHUSJ</div>
+        <div class="collaborator-projects">Thesis committee membership — Samuel Boris Tene (CACNA1A-related epilepsy)</div>
+      </div>
+
+      <div class="collaborator-item">
+        <div class="collaborator-name">Dr. Sami Obaid</div>
+        <div class="collaborator-role">Neurosurgeon — Tractography &amp; Connectomics</div>
+        <div class="collaborator-institution">CHUM · Université de Montréal</div>
+        <div class="collaborator-projects">Diffusion MRI tractography · awake cerebellar surgery · individual participant data meta-analyses</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTNER INSTITUTIONS -->
+  <section class="collab-section" style="margin-top: 64px;">
+    <div class="ach-section-header">
+      <div class="ach-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+      </div>
+      <h2>Partner Institutions</h2>
+    </div>
+
+    <div class="institutions-grid">
+      <div class="institution-tile">
+        <div class="institution-abbr">CHUSJ</div>
+        <div class="institution-name">CHU Sainte-Justine</div>
+        <div class="institution-location">Montréal, QC</div>
+      </div>
+      <div class="institution-tile">
+        <div class="institution-abbr">CHUM</div>
+        <div class="institution-name">Centre Hospitalier de l'Université de Montréal</div>
+        <div class="institution-location">Montréal, QC</div>
+      </div>
+      <div class="institution-tile">
+        <div class="institution-abbr">UdeM</div>
+        <div class="institution-name">Université de Montréal</div>
+        <div class="institution-location">Montréal, QC</div>
+      </div>
+      <div class="institution-tile">
+        <div class="institution-abbr">Poly</div>
+        <div class="institution-name">Polytechnique Montréal</div>
+        <div class="institution-location">Montréal, QC</div>
+      </div>
+      <div class="institution-tile">
+        <div class="institution-abbr">McGill</div>
+        <div class="institution-name">McGill University</div>
+        <div class="institution-location">Montréal, QC</div>
+      </div>
+      <div class="institution-tile">
+        <div class="institution-abbr">SickKids</div>
+        <div class="institution-name">Hospital for Sick Children</div>
+        <div class="institution-location">Toronto, ON</div>
+      </div>
+      <div class="institution-tile">
+        <div class="institution-abbr">Harvard</div>
+        <div class="institution-name">Harvard University</div>
+        <div class="institution-location">Boston, MA</div>
+      </div>
+      <div class="institution-tile">
+        <div class="institution-abbr">UNDH</div>
+        <div class="institution-name">Université Notre-Dame d'Haïti</div>
+        <div class="institution-location">Port-au-Prince, Haiti</div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+{{ end }}
