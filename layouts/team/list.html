@@ -65,7 +65,7 @@
 <!-- CO-INVESTIGATORS & FELLOWS -->
 {{ $coinvestigators := where .Pages "Params.role" "Co-Investigator" }}
 {{ $fellows := where .Pages "Params.role" "Clinical Research Fellow" }}
-{{ $postdocs := where .Pages "Params.role" "Postdoctoral Researcher (AI / iEEG)" }}
+{{ $postdocs := where .Pages "Params.role" "in" (slice "Postdoctoral Researcher (AI / iEEG)" "Postdoctoral Researcher (Computational Neuroscience)") }}
 {{ $coords := where .Pages "Params.role" "Research Coordinator" }}
 {{ $coinvAll := union (union (union $coinvestigators $fellows) $postdocs) $coords }}
 {{ if $coinvAll }}
